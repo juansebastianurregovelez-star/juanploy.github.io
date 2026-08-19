@@ -348,3 +348,8 @@ body::after {
     transform: scale(1);
   }
 }
+.whatsapp-flotante img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
