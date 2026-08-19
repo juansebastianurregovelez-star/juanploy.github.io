@@ -38,3 +38,106 @@ a:hover {
 .logo img:hover {
   transform: scale(1.05) rotate(2deg);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✨ Aparición general */
+main section {
+  animation: entrada 1s ease-out both;
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔥 Logo */
+.logo img {
+  animation: logoEntrada 1.2s ease-out;
+  transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+@keyframes logoEntrada {
+  from {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* 💎 Títulos */
+h1, h2 {
+  animation: titulo 1s ease-out;
+}
+
+@keyframes titulo {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 🖱️ Enlaces y botones */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  transform: translateY(-5px);
+}
+
+/* 💚 Botón de WhatsApp */
+a[href*="wa.me"] {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+a[href*="wa.me"]:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+}
+
+/* 🃏 Efecto para elementos de la página */
+section div {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+section div:hover {
+  transform: translateY(-6px);
+}
+
+/* 🌌 Movimiento suave del fondo */
+body {
+  background-size: 200% 200%;
+  animation: fondo 12s ease infinite;
+}
+
+@keyframes fondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
