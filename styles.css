@@ -141,3 +141,84 @@ body {
     background-position: 0% 50%;
   }
 }
+/* INTRO JUANPLOY */
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: introSalida 1s ease-in-out 2.8s forwards;
+}
+
+.intro-content {
+  text-align: center;
+  animation: introEntrada 1.2s ease-out;
+}
+
+.intro-content img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  animation: logoIntro 1.5s ease-out;
+}
+
+.intro-content h1 {
+  margin: 15px 0 5px;
+  font-size: 42px;
+  letter-spacing: 8px;
+  animation: textoIntro 1.5s ease-out;
+}
+
+.intro-content p {
+  margin: 0;
+  letter-spacing: 4px;
+  opacity: 0.7;
+  animation: textoIntro 1.8s ease-out;
+}
+
+@keyframes introEntrada {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes logoIntro {
+  from {
+    opacity: 0;
+    transform: scale(0.4) rotate(-15deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes textoIntro {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introSalida {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
