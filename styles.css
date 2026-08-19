@@ -303,3 +303,48 @@ body::after {
   opacity: 1;
   transform: translateY(0);
 }
+/* 📱 WHATSAPP FLOTANTE */
+
+.whatsapp-flotante {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 28px;
+  z-index: 9998;
+
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.12);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+}
+
+.whatsapp-flotante {
+  animation: whatsappEntrada 1s ease-out 1.5s both;
+}
+
+@keyframes whatsappEntrada {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
