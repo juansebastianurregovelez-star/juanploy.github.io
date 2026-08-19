@@ -279,3 +279,15 @@ body::after {
     transform: translate(-160px, -100px) scale(1.2);
   }
 }
+/* ✨ APARICIÓN AL HACER SCROLL */
+
+.scroll-animado {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
