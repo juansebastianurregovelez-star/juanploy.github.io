@@ -222,3 +222,60 @@ body {
     transform: translateY(-100%);
   }
 }
+/* 🌌 FONDO MODERNO JUANPLOY */
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 140, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 85% 70%, rgba(140, 0, 255, 0.10), transparent 30%),
+    #050505;
+}
+
+/* Luces ambientales */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background: rgba(0, 110, 255, 0.16);
+  top: -180px;
+  left: -180px;
+  animation: luzAzul 10s ease-in-out infinite alternate;
+}
+
+body::after {
+  background: rgba(150, 0, 255, 0.12);
+  right: -180px;
+  bottom: -180px;
+  animation: luzMorada 12s ease-in-out infinite alternate;
+}
+
+@keyframes luzAzul {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(180px, 100px) scale(1.25);
+  }
+}
+
+@keyframes luzMorada {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(-160px, -100px) scale(1.2);
+  }
+}
