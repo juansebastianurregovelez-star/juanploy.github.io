@@ -2,32 +2,33 @@ const seccionesPortafolio = [
   {
     titulo: "🚚 Diseños para Camiones",
     items: [
-      { img: "./camion-galaxia.jpg", nombre: "Andino Cargo" },
-      { img: "./camion-estetica.jpg", nombre: "Ruta 57" },
-      { img: "./camion-monstruo.jpg", nombre: "Titan Truck" }
+      { img: "./camion%201.jpg", nombre: "Andino Cargo" },
+      { img: "./camion%202.jpg", nombre: "Ruta 57" },
+      { img: "./camion%203.jpg", nombre: "Titan Truck" }
     ]
   },
   {
     titulo: "💈 Barberías y Estilo",
     items: [
-      { img: "./barberia-1.png", nombre: "Barbería Estilo 1" },
-      { img: "./barberia-2.png", nombre: "Barbería Estilo 2" },
-      { img: "./barberia-3.png", nombre: "Barbería Estilo 3" }
+      { img: "./barberia%201.jpg", nombre: "Barbería Estilo 1" },
+      { img: "./barberia%202.jpg", nombre: "Barbería Estilo 2" },
+      { img: "./barberia%203.jpg", nombre: "Barbería Estilo 3" }
     ]
   },
   {
     titulo: "💪 Gimnasios y Fitness",
     items: [
-      { img: "./gimnasio-1.png", nombre: "Gym Fitness 1" },
-      { img: "./gimnasio-2.png", nombre: "Gym Fitness 2" }
+      { img: "./gimnasio%201.jpg", nombre: "Gym Fitness 1" },
+      { img: "./gimnasio%202.jpg", nombre: "Gym Fitness 2" },
+      { img: "./gimnasio%203.jpg", nombre: "Gym Fitness 3" }
     ]
   },
   {
     titulo: "🍔 Restaurantes y Comidas",
     items: [
-      { img: "./restaurante-1.png", nombre: "Restaurante 1" },
-      { img: "./restaurante-2.png", nombre: "Restaurante 2" },
-      { img: "./restaurante-3.png", nombre: "Restaurante 3" }
+      { img: "./restaurante%201.jpg", nombre: "Restaurante 1" },
+      { img: "./restaurante%202.jpg", nombre: "Restaurante 2" },
+      { img: "./restaurante%203.jpg", nombre: "Restaurante 3" }
     ]
   }
 ];
