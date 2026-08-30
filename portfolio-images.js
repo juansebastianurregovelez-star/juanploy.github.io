@@ -2,33 +2,33 @@ const seccionesPortafolio = [
   {
     titulo: "🚚 Diseños para Camiones",
     items: [
-      { img: "./camion 1.jpg", nombre: "Andino Cargo" },
-      { img: "./camion 2.jpg", nombre: "Ruta 57" },
-      { img: "./camion 3.jpg", nombre: "Titan Truck" }
+      { img: "./camion%201.jpg", nombre: "Andino Cargo" },
+      { img: "./camion%202.jpg", nombre: "Ruta 57" },
+      { img: "./camion%203.jpg", nombre: "Titan Truck" }
     ]
   },
   {
     titulo: "💈 Barberías y Estilo",
     items: [
-      { img: "./barberia 1.jpg", nombre: "Barbería Estilo 1" },
-      { img: "./barberia 2.jpg", nombre: "Barbería Estilo 2" },
-      { img: "./barberia 3.jpg", nombre: "Barbería Estilo 3" }
+      { img: "./barberia%201.jpg", nombre: "Barbería Estilo 1" },
+      { img: "./barberia%202.jpg", nombre: "Barbería Estilo 2" },
+      { img: "./barberia%203.jpg", nombre: "Barbería Estilo 3" }
     ]
   },
   {
     titulo: "💪 Gimnasios y Fitness",
     items: [
-      { img: "./gidnasio 1.jpg", nombre: "Gym Fitness 1" },
-      { img: "./gidnasio 2.jpg", nombre: "Gym Fitness 2" },
-      { img: "./gidnasio3.jpg", nombre: "Gym Fitness 3" } 
+      { img: "./gidnasio%201.jpg.jpg", nombre: "Gym Fitness 1" },
+      { img: "./gidnasio%202.jpg.jpg", nombre: "Gym Fitness 2" },
+      { img: "./gidnasio3.jpg.jpg", nombre: "Gym Fitness 3" } 
     ]
   },
   {
     titulo: "🍔 Restaurantes y Comidas",
     items: [
-      { img: "./restaurante 1.jpg", nombre: "Restaurante 1" },
-      { img: "./restaurante 2.jpg", nombre: "Restaurante 2" },
-      { img: "./restaurante 3.jpg", nombre: "Restaurante 3" }
+      { img: "./restaurante%201.jpg", nombre: "Restaurante 1" },
+      { img: "./restaurante%202.jpg", nombre: "Restaurante 2" },
+      { img: "./restaurante%203.jpg", nombre: "Restaurante 3" }
     ]
   }
 ];
@@ -63,7 +63,7 @@ if (contenedorPortafolio) {
     seccion.items.forEach(item => {
       const cardHTML = `
         <div class="card" style="background: #111; border: 1px solid #222; padding: 15px; border-radius: 8px; text-align: center;">
-          <img src="${item.img}" alt="${item.nombre}" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 10px;" onerror="this.onerror=null; if(!this.src.includes('%20')) { this.src=this.src.replace(' ', '%20'); } else if(this.src.endsWith('.jpg')) { this.src=this.src.replace('.jpg', '.png'); }">
+          <img src="${item.img}" alt="${item.nombre}" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 10px;">
           <h4 style="color: #ccc; margin: 0; font-size: 16px;">${item.nombre}</h4>
         </div>
       `;
