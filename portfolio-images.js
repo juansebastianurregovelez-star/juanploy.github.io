@@ -15,14 +15,7 @@ const seccionesPortafolio = [
       { img: "./barberia%203.jpg", nombre: "Barbería Estilo 3" }
     ]
   },
-  {
-    titulo: "💪 Gimnasios y Fitness",
-    items: [
-      { img: "./gidnasio%201.jpg.jpg", nombre: "Gym Fitness 1" },
-      { img: "./gidnasio%202.jpg.jpg", nombre: "Gym Fitness 2" },
-      { img: "./gidnasio3.jpg.jpg", nombre: "Gym Fitness 3" } 
-    ]
-  },
+
   {
     titulo: "🍔 Restaurantes y Comidas",
     items: [
