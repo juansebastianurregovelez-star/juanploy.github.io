@@ -16,12 +16,11 @@ const seccionesPortafolio = [
     ]
   },
   {
-{
     titulo: "💪 Gimnasios y Fitness",
     items: [
       { img: "./gidnasio%201.jpg", nombre: "Gym Fitness 1" },
       { img: "./gidnasio%202.jpg", nombre: "Gym Fitness 2" },
-      { img: "./gidnasio%203.jpg", nombre: "Gym Fitness 3" }
+      { img: "./gidnasio3.jpg", nombre: "Gym Fitness 3" } 
     ]
   },
   {
