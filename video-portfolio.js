@@ -30,3 +30,41 @@ function filterPortfolio(categoryName) {
     selectedCat.classList.add('active');
   }
 }
+/* Ajuste de la galería para que las fotos sean uniformes */
+.grid-portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.grid-portfolio .item {
+  width: 100%;
+  text-align: center;
+}
+
+.grid-portfolio .item img {
+  width: 100%;
+  height: 250px; /* Forzamos a que todas tengan la misma altura */
+  object-fit: cover; /* Recorta la imagen elegantemente para que no se deforme */
+  border-radius: 6px;
+  border: 1px solid #222;
+}
+
+/* Ajuste para que los botones de categorías no deformen el ancho del celular */
+.portfolio-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.tab-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
