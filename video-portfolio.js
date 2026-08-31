@@ -11,7 +11,7 @@ videoSection.innerHTML = `<p class="mini">03 / VIDEO</p>
 </div>`;
 
 // Cambiamos esta línea para meter el video al final del body sin romper nada
-document.body.appendChild(videoSection);
+document.querySelector('#precios').before(videoSection);
 
 function filterPortfolio(categoryName) {
   // Oculta todas las galerías de fotos
