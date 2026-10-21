@@ -345,18 +345,4 @@ body {
 
 </body>
 </html>
-<script>
-const videos = document.querySelectorAll('video');
 
-const observador = new IntersectionObserver((entradas) => {
-  entradas.forEach((entrada) => {
-    if (entrada.isIntersecting) {
-      entrada.target.play().catch(() => {});
-    } else {
-      entrada.target.pause();
-    }
-  });
-}, { threshold: 0.25 });
-
-videos.forEach((video) => observador.observe(video));
-</script>
