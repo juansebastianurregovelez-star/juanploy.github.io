@@ -361,7 +361,25 @@ body {
     observador.observe(seccion);
   });
 </script>
+<script>
+  document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
+    const servicio = tarjeta.querySelector('h3').textContent.trim();
+    const boton = tarjeta.querySelector('a');
 
+    const mensaje = `Hola JUANPLOY, quiero cotizar: ${servicio}. Mi idea es: `;
+
+    boton.href = `https://wa.me/573216302437?text=${encodeURIComponent(mensaje)}`;
+    boton.target = '_blank';
+    boton.textContent = 'Quiero este servicio ↗';
+
+    const info = document.createElement('p');
+    info.textContent = 'Entrega estimada: 1–3 días · Incluye 1 ajuste';
+    info.style.cssText = 'color:#aaa;font-size:13px;line-height:1.5;margin:12px 0 0;font-family:sans-serif;';
+
+    const descripcion = tarjeta.querySelector('p');
+    descripcion.insertAdjacentElement('afterend', info);
+  });
+</script>
 </body>
 </html>
 
