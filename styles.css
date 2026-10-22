@@ -523,70 +523,102 @@ body::after {
     padding: 60px 20px;
 }
 
-/* Contenedor que distribuye los dos lados */
+/* Contenedor general en vertical y centrado */
 .esencia-contenedor {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;          /* Separación intermedia */
-    max-width: 1250px;  
-    margin: 0 auto;
-    padding: 80px 20px;
-    background-color: #000000; /* Asegura tu fondo negro original */
-}
-
-/* Caja del lado izquierdo */
-.esencia-izquierda {
-    flex: 1;
-}
-
-/* Título optimizado para que no colisione */
-.esencia-izquierda h2.titulo-gigante {
-    font-size: 4.2rem;   /* Tamaño grande y controlado */
-    line-height: 1.1;    /* Altura de línea ideal para evitar montajes */
-    font-weight: 800;
-    color: #ffffff;
-    margin-top: 20px;
-    letter-spacing: -1px;
-}
-
-/* Contenedor del lado derecho */
-.esencia-columnas {
-    flex: 1.2;
-    display: flex;
     flex-direction: column;
-    gap: 25px;           /* Separación entre tarjetas */
+    align-items: center;    
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #000000; /* Fondo negro de tu web */
+}
+
+/* Encabezado superior */
+.esencia-encabezado {
+    text-align: center;
+    margin-bottom: 50px;    /* Espacio entre los títulos y las tarjetas */
+}
+
+.esencia-encabezado .mini {
+    color: #2ecc71;         /* Texto pequeño en verde brillante */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+}
+
+.esencia-encabezado h2.titulo-gigante {
+    font-size: 2.8rem;      
+    color: #ffffff;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.esencia-encabezado .intro-subtitulo {
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Alinea las 3 tarjetas en una fila horizontal */
+.esencia-fila-tarjetas {
+    display: flex;
+    flex-direction: row;    /* Forzar fila horizontal */
+    justify-content: space-between;
+    gap: 25px;              /* Espacio de separación entre las tarjetas */
+    width: 100%;
 }
 
 /* Diseño idéntico de tarjeta de la sección proceso */
 .tarjeta-proceso {
-    background-color: #111111; /* Fondo gris muy oscuro */
-    border: 1px solid #222222; /* Borde sutil */
-    border-radius: 12px;       /* Bordes redondeados */
-    padding: 25px;
+    flex: 1;                /* Hace que las 3 tengan el mismo ancho */
+    background-color: #111111; 
+    border: 1px solid #222222; 
+    border-radius: 16px;       /* Bordes redondeados estéticos */
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;    /* Centra los textos internos */
+    text-align: center;
+    gap: 15px;
+    transition: all 0.3s ease; /* Transición suave para la animación */
+    cursor: pointer;
 }
 
-/* Círculo con número verde idéntico */
+/* ANIMACIÓN HOVER: Brillo y sombreado verde al pasar el mouse */
+.tarjeta-proceso:hover {
+    transform: translateY(-5px);    /* Levanta la tarjeta sutilmente */
+    border-color: #2ecc71;          /* El borde cambia a verde */
+    /* Sombreado verde brillante por debajo */
+    box-shadow: 0 12px 30px rgba(46, 204, 113, 0.25); 
+}
+
+/* Círculo con el número verde */
 .numero-verde {
-    background-color: #2ecc71; /* Color verde vibrante */
+    background-color: #2ecc71; 
     color: #000000;
     font-weight: bold;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* Títulos internos de las tarjetas */
+/* Títulos y textos internos de las tarjetas */
 .tarjeta-proceso h3 {
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 5px 0 0 0;
-    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.tarjeta-proceso .intro {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
 }
