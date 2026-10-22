@@ -432,13 +432,15 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   const plan = planes[servicio];
   if (!plan) return;
 
-  // Actualizar el mensaje del botón de WhatsApp.
-  boton.href = 'https://wa.me/573216304237?text=' +
-    encodeURIComponent(plan.mensaje);
+ // Actualizar el mensaje del botón de WhatsApp.
+  const numeroWhatsApp = '573216302437';
+
+  boton.href = 'https://wa.me/' + numeroWhatsApp +
+    '?text=' + encodeURIComponent(plan.mensaje);
+
   boton.target = '_blank';
   boton.rel = 'noopener noreferrer';
   boton.textContent = 'Quiero este servicio ↗';
-
   // Agregar características sin borrar la descripción original.
   let lista = tarjeta.querySelector('.detalles-plan');
 
