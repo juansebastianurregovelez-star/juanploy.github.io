@@ -436,10 +436,8 @@ if (!plan) return;
 const nombreServicio = tarjeta.querySelector('h2, h3, .titulo')?.textContent?.trim() || "un servicio";
 const precioServicio = tarjeta.querySelector('.precio, span, p')?.textContent?.trim() || "";
 
-// Armar el mensaje directo y limpio
-const textoMensaje = `¡Hola, JuanPloy! 👋 Me interesa el servicio de *${nombreServicio}* por ${precioServicio}.`;
-
-boton.href = `https://wa.me{encodeURIComponent(textoMensaje)}`;
+const textoMensaje = "¡Hola, JuanPloy! 👋 Me interesa el servicio de *" + nombreServicio + "* por " + precioServicio + ".";
+boton.href = "https://wa.me" + encodeURIComponent(textoMensaje);
 boton.target = '_blank';
 boton.rel = 'noopener noreferrer';
 boton.textContent = 'Quiero este servicio ↗';
