@@ -519,83 +519,39 @@ body::after {
         height: 32px;
     }
 }
-/* Une el lado izquierdo y el derecho */
-.esencia-contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
-}
 
-/* Caja del título a la izquierda */
-.esencia-izquierda {
-    flex: 1;
-}
-
-.esencia-izquierda h2 {
-    font-size: 3.5rem;  
-    line-height: 1.1;
-    margin-top: 15px;
-}
-
-/* Caja de los textos a la derecha */
-.esencia-columnas {
-    flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-}
-
-.columna .numero {
-    font-size: 0.8rem;
-    opacity: 0.5;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.columna h3 {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-/* Alinea el título a la izquierda y el bloque de textos a la derecha */
-.esencia-contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 80px;          /* Espacio intermedio de separación */
-    max-width: 1200px;  /* Ajusta el ancho al centro */
-    margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* Contenedor del título izquierdo */
-.esencia-izquierda {
-    flex: 1;
-}
+<section id="esencia" class="esencia">
+    <div class="esencia-contenedor">
+        
+        <!-- LADO IZQUIERDO: Título principal -->
+        <div class="esencia-izquierda">
+            <p class="mini">01 / ESENCIA</p>
+            <h2 class="titulo-gigante">CREAMOS<br>LO QUE IMAGINAS</h2>
+        </div>
+        
+        <!-- LADO DERECHO: Tus tres bloques de texto -->
+        <div class="esencia-columnas">
+            <div class="columna">
+                <span class="mini">01</span>
+                <h3>CREATIVIDAD SIN LÍMITES</h3>
+                <p class="intro">Cada proyecto comienza con una idea y termina con algo que tiene personalidad propia.</p>
+            </div>
+            
+            <div class="columna">
+                <span class="mini">02</span>
+                <h3>DETALLES QUE MARCAN</h3>
+                <p class="intro">Cuidamos cada elemento para conseguir un resultado visual limpio, moderno y memorable.</p>
+            </div>
+            
+            <div class="columna">
+                <span class="mini">03</span>
+                <h3>HECHO PARA DESTACAR</h3>
+                <p class="intro">Diseño de logos y edición de videos para marcas y negocios que buscan el siguiente nivel.</p>
+            </div>
+        </div>
 
-/* Ajuste fino del tamaño del título si lo deseas controlar */
-.esencia-izquierda h2 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    margin-top: 15px;
-}
-
-/* Contenedor vertical de los tres bloques derechos */
-.esencia-columnas {
-    flex: 1.3;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;          /* Distancia vertical entre cada bloque de texto */
-}
-
-/* Posicionamiento de los números pequeños */
-.columna .numero {
-    font-size: 0.8rem;
-    opacity: 0.6;
-    display: block;
-    margin-bottom: 5px;
-}
+    </div>
+</section>
