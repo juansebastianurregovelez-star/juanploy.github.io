@@ -362,24 +362,102 @@ body {
   });
 </script>
 <script>
-  document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
-    const servicio = tarjeta.querySelector('h3').textContent.trim();
-    const boton = tarjeta.querySelector('a');
+document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
+  const titulo = tarjeta.querySelector('h3');
+  const boton = tarjeta.querySelector('a');
+  const descripcion = tarjeta.querySelector('p');
 
-    const mensaje = `Hola JUANPLOY, quiero cotizar: ${servicio}. Mi idea es: `;
+  if (!titulo || !boton || !descripcion) return;
 
-    boton.href = `https://wa.me/573216302437?text=${encodeURIComponent(mensaje)}`;
-    boton.target = '_blank';
-    boton.textContent = 'Quiero este servicio ↗';
+  const servicio = titulo.textContent.trim();
 
-    const info = document.createElement('p');
-    info.textContent = 'Entrega estimada: 1–3 días · Incluye 1 ajuste';
-    info.style.cssText = 'color:#aaa;font-size:13px;line-height:1.5;margin:12px 0 0;font-family:sans-serif;';
+  const planes = {
+    'Diseño de Logo': {
+      precio: '$15.000 COP',
+      mensaje: 'Hola, JUANPLOY. Quiero contratar el servicio de Diseño de Logo por $15.000 COP. ¿Cómo puedo comenzar mi pedido?',
+      detalles: [
+        'Logo personalizado',
+        'Propuestas de diseño',
+        'PNG con fondo transparente',
+        '1 ronda de ajustes'
+      ],
+      entrega: 'Entrega estimada: 1–3 días'
+    },
+    'Edición de Video': {
+      precio: '$20.000 COP',
+      mensaje: 'Hola, JUANPLOY. Quiero contratar el servicio de Edición de Video por $20.000 COP. ¿Qué archivos debo enviarte?',
+      detalles: [
+        'Video de hasta 60 segundos',
+        'Transiciones y efectos',
+        'Música y textos',
+        '1 ronda de ajustes'
+      ],
+      entrega: 'Entrega estimada: 1–3 días'
+    },
+    'Logo + Video': {
+      precio: '$30.000 COP',
+      mensaje: 'Hola, JUANPLOY. Quiero contratar el paquete Logo + Video por $30.000 COP, con el descuento de $5.000 COP. ¿Cómo comenzamos?',
+      detalles: [
+        'Logo personalizado',
+        'Video promocional de hasta 60 segundos',
+        'Música, textos y efectos',
+        '1 ronda de ajustes por servicio'
+      ],
+      entrega: 'Entrega estimada: 2–4 días'
+    }
+  };
 
-    const descripcion = tarjeta.querySelector('p');
-    descripcion.insertAdjacentElement('afterend', info);
-  });
+  const plan = planes[servicio];
+  if (!plan) return;
+
+  // Actualizar el mensaje del botón de WhatsApp.
+  boton.href = 'https://wa.me/573216304237?text=' +
+    encodeURIComponent(plan.mensaje);
+  boton.target = '_blank';
+  boton.rel = 'noopener noreferrer';
+  boton.textContent = 'Quiero este servicio ↗';
+
+  // Agregar características sin borrar la descripción original.
+  let lista = tarjeta.querySelector('.detalles-plan');
+
+  if (!lista) {
+    lista = document.createElement('div');
+    lista.className = 'detalles-plan';
+    descripcion.insertAdjacentElement('afterend', lista);
+  }
+
+  lista.innerHTML = `
+    <div style="border-top:1px solid #45454f;margin-top:18px;padding-top:14px">
+      <p style="color:#24e879;font-size:12px;font-weight:700">
+        ¿QUÉ INCLUYE?
+      </p>
+      ${plan.detalles.map(item => `
+        <p style="color:#eee;font-size:13px;line-height:1.6;margin:8px 0">
+          <span style="color:#24e879">✓</span> ${item}
+        </p>
+      `).join('')}
+      <p style="color:#aaa;font-size:13px;margin-top:16px">
+        ◷ ${plan.entrega}
+      </p>
+    </div>
+  `;
+
+  // Mostrar el descuento de $5.000 en Logo + Video.
+  if (servicio === 'Logo + Video' &&
+      !tarjeta.querySelector('.etiqueta-descuento')) {
+    const descuento = document.createElement('div');
+    descuento.className = 'etiqueta-descuento';
+    descuento.innerHTML = `
+      <div style="display:inline-block;background:#24e879;color:#07180d;
+        font-size:12px;font-weight:800;padding:7px 12px;
+        border-radius:20px;margin:12px 0">
+        🏷 AHORRA $5.000 COP
+      </div>
+      <p style="color:#aaa;font-size:13px;margin:4px 0">
+        Precio por separado: <s>$35.000 COP</s>
+      </p>
+    `;
+    titulo.insertAdjacentElement('afterend', descuento);
+  }
+});
 </script>
-</body>
-</html>
-
