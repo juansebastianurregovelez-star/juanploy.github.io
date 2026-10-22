@@ -437,7 +437,7 @@ const nombreServicio = tarjeta.querySelector('h2, h3, .titulo')?.textContent?.tr
 const precioServicio = tarjeta.querySelector('.precio, span, p')?.textContent?.trim() || "";
 
 const textoMensaje = "¡Hola, JuanPloy! 👋 Me interesa el servicio de *" + nombreServicio + "* por " + precioServicio + ".";
-boton.href = "https://wa.me/573216302437 + encodeURIComponent(textoMensaje);
+boton.href = "https://wa.me + encodeURIComponent(textoMensaje);
 boton.target = '_blank';
 boton.rel = 'noopener noreferrer';
 boton.textContent = 'Quiero este servicio ↗';
