@@ -522,8 +522,7 @@ body::after {
 
     padding: 60px 20px;
 }
-
-/* Contenedor general en vertical y centrado */
+/* Contenedor principal centrado */
 .esencia-contenedor {
     display: flex;
     flex-direction: column;
@@ -531,66 +530,53 @@ body::after {
     max-width: 1200px;  
     margin: 0 auto;
     padding: 60px 20px;
-    background-color: #000000; /* Fondo negro de tu web */
+    background-color: #000000;
 }
 
 /* Encabezado superior */
 .esencia-encabezado {
     text-align: center;
-    margin-bottom: 50px;    /* Espacio entre los títulos y las tarjetas */
-}
-
-.esencia-encabezado .mini {
-    color: #2ecc71;         /* Texto pequeño en verde brillante */
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    font-size: 0.9rem;
+    margin-bottom: 50px; 
 }
 
 .esencia-encabezado h2.titulo-gigante {
-    font-size: 2.8rem;      
+    font-size: 3.8rem;      
+    line-height: 1.2;
+    font-weight: 800;
     color: #ffffff;
-    margin: 10px 0;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-.esencia-encabezado .intro-subtitulo {
-    color: #aaaaaa;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Alinea las 3 tarjetas en una fila horizontal */
+/* FILA DE TARJETAS: Reducida a max-width 1000px para centrarla más */
 .esencia-fila-tarjetas {
     display: flex;
-    flex-direction: row;    /* Forzar fila horizontal */
-    justify-content: space-between;
-    gap: 25px;              /* Espacio de separación entre las tarjetas */
+    flex-direction: row;    
+    justify-content: center; /* Centra el grupo de tarjetas */
+    gap: 25px;              /* Espacio fijo entre ellas */
     width: 100%;
+    max-width: 1000px;      /* Hace que el bloque sea más estrecho y centrado */
 }
 
-/* Diseño idéntico de tarjeta de la sección proceso */
+/* Diseño de tarjeta oscura */
 .tarjeta-proceso {
-    flex: 1;                /* Hace que las 3 tengan el mismo ancho */
+    flex: 1;                
     background-color: #111111; 
     border: 1px solid #222222; 
-    border-radius: 16px;       /* Bordes redondeados estéticos */
+    border-radius: 16px;       
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centra los textos internos */
+    align-items: center;    
     text-align: center;
     gap: 15px;
-    transition: all 0.3s ease; /* Transición suave para la animación */
+    transition: all 0.3s ease; 
     cursor: pointer;
 }
 
-/* ANIMACIÓN HOVER: Brillo y sombreado verde al pasar el mouse */
+/* ANIMACIÓN HOVER: Sombreado verde brillante por debajo */
 .tarjeta-proceso:hover {
-    transform: translateY(-5px);    /* Levanta la tarjeta sutilmente */
-    border-color: #2ecc71;          /* El borde cambia a verde */
-    /* Sombreado verde brillante por debajo */
+    transform: translateY(-5px);    
+    border-color: #2ecc71;          
     box-shadow: 0 12px 30px rgba(46, 204, 113, 0.25); 
 }
 
@@ -611,9 +597,10 @@ body::after {
 /* Títulos y textos internos de las tarjetas */
 .tarjeta-proceso h3 {
     color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 5px 0 0 0;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 .tarjeta-proceso .intro {
