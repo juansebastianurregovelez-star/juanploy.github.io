@@ -523,35 +523,70 @@ body::after {
     padding: 60px 20px;
 }
 
-<section id="esencia" class="esencia">
-    <div class="esencia-contenedor">
-        
-        <!-- LADO IZQUIERDO: Título principal -->
-        <div class="esencia-izquierda">
-            <p class="mini">01 / ESENCIA</p>
-            <h2 class="titulo-gigante">CREAMOS<br>LO QUE IMAGINAS</h2>
-        </div>
-        
-        <!-- LADO DERECHO: Tus tres bloques de texto -->
-        <div class="esencia-columnas">
-            <div class="columna">
-                <span class="mini">01</span>
-                <h3>CREATIVIDAD SIN LÍMITES</h3>
-                <p class="intro">Cada proyecto comienza con una idea y termina con algo que tiene personalidad propia.</p>
-            </div>
-            
-            <div class="columna">
-                <span class="mini">02</span>
-                <h3>DETALLES QUE MARCAN</h3>
-                <p class="intro">Cuidamos cada elemento para conseguir un resultado visual limpio, moderno y memorable.</p>
-            </div>
-            
-            <div class="columna">
-                <span class="mini">03</span>
-                <h3>HECHO PARA DESTACAR</h3>
-                <p class="intro">Diseño de logos y edición de videos para marcas y negocios que buscan el siguiente nivel.</p>
-            </div>
-        </div>
+/* Contenedor que distribuye los dos lados */
+.esencia-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;          /* Separación intermedia */
+    max-width: 1250px;  
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-color: #000000; /* Asegura tu fondo negro original */
+}
 
-    </div>
-</section>
+/* Caja del lado izquierdo */
+.esencia-izquierda {
+    flex: 1;
+}
+
+/* Título optimizado para que no colisione */
+.esencia-izquierda h2.titulo-gigante {
+    font-size: 4.2rem;   /* Tamaño grande y controlado */
+    line-height: 1.1;    /* Altura de línea ideal para evitar montajes */
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 20px;
+    letter-spacing: -1px;
+}
+
+/* Contenedor del lado derecho */
+.esencia-columnas {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;           /* Separación entre tarjetas */
+}
+
+/* Diseño idéntico de tarjeta de la sección proceso */
+.tarjeta-proceso {
+    background-color: #111111; /* Fondo gris muy oscuro */
+    border: 1px solid #222222; /* Borde sutil */
+    border-radius: 12px;       /* Bordes redondeados */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Círculo con número verde idéntico */
+.numero-verde {
+    background-color: #2ecc71; /* Color verde vibrante */
+    color: #000000;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* Títulos internos de las tarjetas */
+.tarjeta-proceso h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 5px 0 0 0;
+    letter-spacing: 0.5px;
+}
