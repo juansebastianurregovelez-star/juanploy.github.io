@@ -606,3 +606,34 @@ body::after {
     margin: 5px 0 0 0 !important;
 }
 
+/* Estilos para el texto de bienvenida e inicio */
+.intro-content h1 {
+    color: #ffffff !important;
+    font-size: 4.8rem !important;
+    font-weight: 900 !important;
+    line-height: 1.0 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 20px !important;
+}
+
+.intro-content p {
+    color: #cccccc !important;
+    font-size: 1.1rem !important;
+    max-width: 500px !important;
+    margin-bottom: 30px !important;
+}
+
+.boton-accion {
+    display: inline-block !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 14px 28px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.boton-accion:hover {
+    background-color: #2ecc71 !important; /* Brillo verde al pasar el mouse */
+}
