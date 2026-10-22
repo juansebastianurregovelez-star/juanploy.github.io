@@ -429,15 +429,20 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
     }
   };
 
-  const plan = planes[servicio];
-  if (!plan) return;
+ const plan = planes[servicio];
+if (!plan) return;
 
-  // Actualizar el mensaje del botón de WhatsApp.
-  boton.href ="https://wa.me/573216302437"
-    encodeURIComponent(plan.mensaje);
-  boton.target = '_blank';
-  boton.rel = 'noopener noreferrer';
-  boton.textContent = 'Quiero este servicio ↗';
+// Leer el nombre y precio directamente de la tarjeta
+const nombreServicio = tarjeta.querySelector('h2, h3, .titulo')?.textContent?.trim() || "un servicio";
+const precioServicio = tarjeta.querySelector('.precio, span, p')?.textContent?.trim() || "";
+
+// Armar el mensaje directo y limpio
+const textoMensaje = `¡Hola, JuanPloy! 👋 Me interesa el servicio de *${nombreServicio}* por ${precioServicio}.`;
+
+boton.href = `https://wa.me{encodeURIComponent(textoMensaje)}`;
+boton.target = '_blank';
+boton.rel = 'noopener noreferrer';
+boton.textContent = 'Quiero este servicio ↗';
 
   // Agregar características sin borrar la descripción original.
   let lista = tarjeta.querySelector('.detalles-plan');
