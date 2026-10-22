@@ -522,7 +522,7 @@ body::after {
 
     padding: 60px 20px;
 }
-/* Contenedor principal centrado */
+/* Organiza el bloque de Esencia de arriba a abajo */
 .esencia-contenedor {
     display: flex;
     flex-direction: column;
@@ -530,13 +530,12 @@ body::after {
     max-width: 1200px;  
     margin: 0 auto;
     padding: 60px 20px;
-    background-color: #000000;
 }
 
-/* Encabezado superior */
+/* Centrado del título principal */
 .esencia-encabezado {
     text-align: center;
-    margin-bottom: 50px; 
+    margin-bottom: 40px; 
 }
 
 .esencia-encabezado h2.titulo-gigante {
@@ -547,17 +546,17 @@ body::after {
     margin-top: 10px;
 }
 
-/* FILA DE TARJETAS: Reducida a max-width 1000px para centrarla más */
+/* Fuerza a las tarjetas a estar alineadas horizontalmente y bien centradas */
 .esencia-fila-tarjetas {
     display: flex;
     flex-direction: row;    
-    justify-content: center; /* Centra el grupo de tarjetas */
-    gap: 25px;              /* Espacio fijo entre ellas */
+    justify-content: center; /* Junta las tarjetas hacia el centro de la pantalla */
+    gap: 30px;              /* Espacio de separación entre ellas */
     width: 100%;
-    max-width: 1000px;      /* Hace que el bloque sea más estrecho y centrado */
+    max-width: 950px;       /* Controla qué tan juntas se ven en el medio */
 }
 
-/* Diseño de tarjeta oscura */
+/* Mantiene el diseño original de tus tarjetas */
 .tarjeta-proceso {
     flex: 1;                
     background-color: #111111; 
@@ -573,14 +572,14 @@ body::after {
     cursor: pointer;
 }
 
-/* ANIMACIÓN HOVER: Sombreado verde brillante por debajo */
+/* ANIMACIÓN HOVER: Sombreado verde brillante en la parte inferior externa */
 .tarjeta-proceso:hover {
-    transform: translateY(-5px);    
-    border-color: #2ecc71;          
-    box-shadow: 0 12px 30px rgba(46, 204, 113, 0.25); 
+    transform: translateY(-5px);    /* Se eleva sutilmente */
+    border-color: #2ecc71;          /* El borde se ilumina en verde */
+    box-shadow: 0 12px 30px rgba(46, 204, 113, 0.3); /* Destello verde por debajo */
 }
 
-/* Círculo con el número verde */
+/* Estilo del círculo del número verde */
 .numero-verde {
     background-color: #2ecc71; 
     color: #000000;
@@ -592,20 +591,4 @@ body::after {
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-}
-
-/* Títulos y textos internos de las tarjetas */
-.tarjeta-proceso h3 {
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin: 5px 0 0 0;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-.tarjeta-proceso .intro {
-    color: #cccccc;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0;
 }
