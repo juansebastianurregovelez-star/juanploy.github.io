@@ -794,3 +794,15 @@ body::after {
 section {
     background-color: #000000 !important;
 }
+section#contacto, 
+.contacto,
+#contacto {
+    background-color: #000000 !important;
+    background: #000000 !important;
+}
+  section#contacto, 
+.contacto,
+#contacto {
+    background-color: #000000 !important;
+    background: #000000 !important;
+}
