@@ -710,80 +710,140 @@ body::after {
   border-radius: 50%;
 }
 
-/* --- ARREGLO INMEDIATO DE EMERGENCIA --- */
-@media (max-width: 768px) {
+De CT
+/* ==========================================
+   JUANPLOY - AJUSTES MÓVILES
+   Portada original + tarjetas verticales
+   ========================================== */
 
-  /* 1. ENDEREZAR LAS LETRAS DEL TÍTULO (Quita lo vertical) */
+@media screen and (max-width: 768px) {
+
+  /* ========================================
+     1. PORTADA: TEXTO Y CONEJO DE FONDO
+     ======================================== */
+
   section#inicio.hero {
     display: block !important;
     position: relative !important;
-    padding: 50px 0 !important;
-  }
-  .hero-contenido {
-    display: block !important;
     width: 100% !important;
-    text-align: right !important;
-    padding: 0 20px !important;
+    min-height: 540px !important;
+    padding: 60px 22px !important;
     box-sizing: border-box !important;
-    z-index: 10 !important;
-    position: relative !important;
-  }
-  .hero-contenido h1 {
-    font-size: 2.3rem !important;
-    line-height: 1.2 !important;
-    white-space: normal !important; /* Estira las palabras horizontalmente */
-    display: block !important;
-    width: 100% !important;
-  }
-  .hero-descripcion {
-    font-size: 1.1rem !important;
-    width: 80% !important;
-    margin-left: auto !important;
-    display: block !important;
-  }
-  .hero-boton {
-    display: inline-block !important;
-    margin-top: 15px !important;
+    overflow: hidden !important;
   }
 
-  /* 2. ACOMODAR EL CONEJO DE FONDO A LA IZQUIERDA */
-  .hero-logo {
+  section#inicio .hero-contenido {
+    display: block !important;
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  section#inicio .hero-contenido h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    writing-mode: horizontal-tb !important;
+    margin: 0 0 18px !important;
+  }
+
+  section#inicio .hero-descripcion {
+    display: block !important;
+    width: 90% !important;
+    max-width: 360px !important;
+    margin: 0 0 18px !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+  }
+
+  section#inicio .hero-boton {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  /* Conejo de fondo, a la derecha y detrás del texto */
+
+  section#inicio .hero-logo {
     display: block !important;
     position: absolute !important;
     top: 50% !important;
-    transform: translateY(-50%) !important;
-    left: -15% !important;
-    right: auto !important;
+    right: -15% !important;
+    left: auto !important;
     width: 75% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    transform: translateY(-50%) !important;
+    opacity: 0.18 !important;
     z-index: 1 !important;
-    opacity: 0.2 !important; /* Sutil detrás del texto */
     pointer-events: none !important;
   }
-  .hero-logo img { width: 100% !important; height: auto !important; }
 
-  /* 3. OBLIGAR A LAS TARJETAS A PONERSE UNA ABAJO DE OTRA */
-  /* Forzamos a todos los contenedores hijos de 'esencia' a ordenarse en vertical */
-  section#esencia div, .esencia div {
-    display: flex !important;
-    flex-direction: column !important; /* Apila las tarjetas verticalmente */
-    align-items: center !important;
+  section#inicio .hero-logo img {
+    display: block !important;
     width: 100% !important;
-  }
-  /* Mantiene las tarjetas individuales con su tamaño correcto */
-  section#esencia div div, .esencia div div {
-    width: 100% !important;
-    max-width: 320px !important;
-    margin-bottom: 20px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
   }
 
-  /* 4. REPARAR EL BOTÓN DE WHATSAPP */
-  .whatsapp-btn, a[href*="wa.me"], a[href*="whatsapp"] {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 20px !important;
-    width: 55px !important;
-    height: 55px !important;
-    z-index: 99999 !important;
+
+  /* ========================================
+     2. TÍTULO DE ESENCIA MÁS PEQUEÑO
+     ======================================== */
+
+  section#esencia,
+  .esencia {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 35px 20px !important;
+    box-sizing: border-box !important;
   }
-}
+
+  .esencia-encabezado {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .esencia-encabezado .mini {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .esencia-encabezado .titulo-gigante {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(1.5rem, 6vw, 2.1rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.025em !important;
+    text-align: center !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
 
