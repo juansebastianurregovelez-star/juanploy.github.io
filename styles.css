@@ -710,88 +710,65 @@ body::after {
   border-radius: 50%;
 }
 
-/* ===== ADAPTACIÓN PARA CELULARES ===== */
-
-@media (max-width: 700px) {
-  .hero {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 30px;
-    padding: 55px 22px 45px;
-  }
-
-  .hero-contenido {
-    width: 100%;
-  }
-
-  .hero-etiqueta {
-    margin-bottom: 18px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-  }
-
-  .hero h1 {
-    margin-bottom: 20px;
-    font-size: clamp(38px, 10vw, 62px);
-    line-height: 1;
-    letter-spacing: -1.5px;
-  }
-
-  .hero-descripcion {
-    font-size: 15px;
-    line-height: 1.65;
-  }
-
-  .hero-boton {
-    max-width: 100%;
-    min-height: 50px;
-    padding: 0 18px;
-    font-size: 14px;
-  }
-
-  .hero-logo {
-    width: min(78%, 300px);
-    max-width: 300px;
-    border-width: 6px;
-  }
-}
 /* --- AJUSTES EXCLUSIVOS PARA TELÉFONOS MÓVILES --- */
 @media (max-width: 768px) {
   
-  /* 1. Ponemos el logo del conejo como fondo del contenedor principal */
+  /* 1. Aseguramos el comportamiento del contenedor general */
   section.hero {
-    background-image: url('favicon.jpg') !important; /* Usamos tu favicon que contiene al conejo */
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: 70% !important; /* Ajusta este porcentaje si quieres el conejo más grande o pequeño */
     position: relative !important;
+    overflow: hidden !important; /* Evita que el círculo se salga de la pantalla */
+    display: block !important;
   }
 
-  /* 2. Centramos el contenido sobre el fondo negro */
+  /* 2. Movemos los textos y el botón hacia el lado derecho */
   .hero-contenido {
+    position: relative !important;
+    z-index: 3 !important; /* Coloca el texto POR ENCIMA del conejo para que sea legible */
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-end !important; /* Alinea los elementos al borde derecho */
+    text-align: right !important; /* Justifica el texto a la derecha */
     width: 100% !important;
-    z-index: 2 !important; /* Asegura que el texto quede por encima del fondo */
+    padding-right: 20px !important; /* Despega el texto del borde de la pantalla */
+    box-sizing: border-box !important;
   }
 
-  /* 3. Forzamos a que el título principal se vea grande */
+  /* 3. Ajustamos el título a la derecha */
   .hero-contenido h1 {
-    font-size: 3.5rem !important; /* Agranda la tipografía considerablemente */
+    font-size: 3.2rem !important; /* Tamaño grande para celular */
     line-height: 1.1 !important;
     margin-bottom: 15px !important;
+    width: 85% !important; /* Controla el ancho para que no ocupe toda la pantalla */
   }
 
-  /* 4. Agrandamos la descripción para mejorar la lectura */
+  /* 4. Ajustamos la descripción a la derecha */
   .hero-descripcion {
-    font-size: 1.4rem !important; 
+    font-size: 1.3rem !important;
     line-height: 1.4 !important;
-    padding: 0 10px !important;
+    width: 80% !important;
+    margin-bottom: 20px !important;
   }
 
-  /* 5. Ocultamos el bloque original del conejo para que no aparezca abajo duplicado */
+  /* 5. Aseguramos que el botón se quede a la derecha */
+  .hero-boton {
+    align-self: flex-end !important;
+  }
+
+  /* 6. CONVERTIMOS EL CONEJO EN EL FONDO DETRÁS DEL TEXTO */
   .hero-logo {
-    display: none !important;
+    display: block !important; /* Forzamos a que aparezca */
+    position: absolute !important;
+    top: 30% !important; /* Lo sube para colocarlo detrás de las letras principales */
+    right: -10% !important; /* Lo desplaza hacia la derecha donde está el texto */
+    width: 75% !important; /* Tamaño del círculo en el fondo */
+    z-index: 1 !important; /* Lo manda al fondo por debajo del texto */
+    opacity: 0.4 !important; /* Le da transparencia para que las letras se puedan leer bien */
+    pointer-events: none !important; /* Evita que estorbe al hacer clic en el botón */
+  }
+
+  /* Ajuste para la imagen interna del conejo */
+  .hero-logo img {
+    width: 100% !important;
+    height: auto !important;
   }
 }
