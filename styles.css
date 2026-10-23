@@ -719,62 +719,73 @@ body::after {
 /* --- AJUSTES EXCLUSIVOS PARA TELÉFONOS MÓVILES --- */
 @media (max-width: 768px) {
   
-  /* 1. Aseguramos el comportamiento del contenedor general */
-  section.hero {
-    position: relative !important;
-    overflow: hidden !important; /* Evita que el círculo se salga de la pantalla */
-    display: block !important;
-  }
-
-  /* 2. Movemos los textos y el botón hacia el lado derecho */
-  .hero-contenido {
-    position: relative !important;
-    z-index: 3 !important; /* Coloca el texto POR ENCIMA del conejo para que sea legible */
+  /* 1. Contenedor principal con altura suficiente */
+  section#inicio.hero {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-end !important; /* Alinea los elementos al borde derecho */
-    text-align: right !important; /* Justifica el texto a la derecha */
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
     width: 100% !important;
-    padding-right: 20px !important; /* Despega el texto del borde de la pantalla */
+    min-height: 85vh !important; /* Le da buena altura para que respire el diseño */
+    padding: 40px 0 !important;
+  }
+
+  /* 2. Reorganizar todo el bloque de contenido a la derecha */
+  .hero-contenido {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important; /* Empuja todo al borde derecho */
+    text-align: right !important;     /* Alinea las líneas de texto a la derecha */
+    width: 100% !important;
+    padding-right: 25px !important;    /* Espacio de seguridad con el borde del cel */
+    padding-left: 20px !important;
+    position: relative !important;
+    z-index: 10 !important;           /* Asegura que el texto esté al frente de todo */
     box-sizing: border-box !important;
   }
 
-  /* 3. Ajustamos el título a la derecha */
+  /* 3. Título grande y compacto a la derecha */
   .hero-contenido h1 {
-    font-size: 3.2rem !important; /* Tamaño grande para celular */
+    font-size: 2.8rem !important; /* Tamaño ideal para que no se rompa feo */
     line-height: 1.1 !important;
     margin-bottom: 15px !important;
-    width: 85% !important; /* Controla el ancho para que no ocupe toda la pantalla */
+    width: 90% !important; 
+    font-weight: bold !important;
   }
 
-  /* 4. Ajustamos la descripción a la derecha */
+  /* 4. Descripción mucho más compacta y estrecha */
   .hero-descripcion {
-    font-size: 1.3rem !important;
+    font-size: 1.15rem !important;
     line-height: 1.4 !important;
-    width: 80% !important;
-    margin-bottom: 20px !important;
+    width: 75% !important;           /* La hacemos más angosta para que no ocupe toda la pantalla */
+    margin-bottom: 25px !important;
+    margin-left: auto !important;    /* La obliga a quedarse pegada a la derecha */
   }
 
-  /* 5. Aseguramos que el botón se quede a la derecha */
+  /* 5. El botón perfectamente alineado con el texto a la derecha */
   .hero-boton {
-    align-self: flex-end !important;
+    align-self: flex-end !important; /* Mueve el botón al extremo derecho */
+    margin-right: 0 !important;
   }
 
-  /* 6. CONVERTIMOS EL CONEJO EN EL FONDO DETRÁS DEL TEXTO */
+  /* 6. Arreglar el logo del conejo para que quede de fondo real */
   .hero-logo {
-    display: block !important; /* Forzamos a que aparezca */
+    display: block !important;
     position: absolute !important;
-    top: 30% !important; /* Lo sube para colocarlo detrás de las letras principales */
-    right: -10% !important; /* Lo desplaza hacia la derecha donde está el texto */
-    width: 75% !important; /* Tamaño del círculo en el fondo */
-    z-index: 1 !important; /* Lo manda al fondo por debajo del texto */
-    opacity: 0.4 !important; /* Le da transparencia para que las letras se puedan leer bien */
-    pointer-events: none !important; /* Evita que estorbe al hacer clic en el botón */
+    top: 45% !important;             /* Lo baja un poco para centrarlo verticalmente */
+    left: -10% !important;           /* Al revés: lo tiramos a la izquierda para balancear el texto de la derecha */
+    width: 85% !important;           /* Tamaño del círculo */
+    z-index: 1 !important;           /* Queda totalmente atrás */
+    opacity: 0.25 !important;        /* Más sutil para que no pelee con el texto blanco */
+    pointer-events: none !important;
   }
 
-  /* Ajuste para la imagen interna del conejo */
   .hero-logo img {
     width: 100% !important;
+    height: auto !important;
+  }
+}
     height: auto !important;
   }
 }
