@@ -794,13 +794,16 @@ body::after {
 section {
     background-color: #000000 !important;
 }
+
+
+} 
+
+/* ESTO VA AL FINAL DE TODO EL ARCHIVO */
+body, 
+section, 
 section#contacto, 
-.contacto,
+.contacto, 
 #contacto {
-    background-color: #000000 !important;
-    background: #000000 !important;
-}
- body, section, #contacto, .contacto {
     background-color: #000000 !important;
     background: #000000 !important;
 }
