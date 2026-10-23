@@ -808,13 +808,12 @@ section#contacto,
     background: #000000 !important;
 }
 
-/* PINTA DE VERDE TODOS LOS SUBTÍTULOS Y NÚMEROS DE LAS SECCIONES */
-.portafolio-subtitle,
-.video-subtitle,
-.contacto-subtitle,
-.tarifas-subtitle,
-section#inicio.hero + section h5,
-section h4,
-section h5 {
-    color: #2ecc71 !important; /* Puedes cambiar este código por tu verde exacto si es necesario */
+/* Pinta de verde los subtítulos pequeños de las secciones */
+section span, 
+section h4, 
+section h5, 
+section h6,
+.subtitulo,
+.subtitle {
+    color: #00FF66 !important;
 }
