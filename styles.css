@@ -719,8 +719,8 @@ body::after {
     grid-template-columns: minmax(0, 1fr) !important;
     align-items: center !important;
     position: relative !important;
-    padding: 55px 22px !important;
-    min-height: auto !important;
+    padding: 90px 22px !important;
+    min-height: 250px !important;
     overflow: hidden;
     box-sizing: border-box !important;
   }
