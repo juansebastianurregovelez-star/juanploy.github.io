@@ -800,9 +800,7 @@ section#contacto,
     background-color: #000000 !important;
     background: #000000 !important;
 }
-  section#contacto, 
-.contacto,
-#contacto {
+ body, section, #contacto, .contacto {
     background-color: #000000 !important;
     background: #000000 !important;
 }
