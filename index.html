@@ -501,3 +501,14 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   }
 });
 </script>
+
+
+  <script>
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+        }, 1500); // Duración de 1.5 segundos en pantalla
+    });
+</script>
