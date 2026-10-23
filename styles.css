@@ -786,4 +786,11 @@ body::after {
     height: auto !important;
   }
 
-  
+  body {
+    background-color: #000000 !important;
+}
+
+/* Esto asegura que las secciones de portafolio y contacto también hereden el negro */
+section {
+    background-color: #000000 !important;
+}
