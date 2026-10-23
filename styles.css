@@ -710,62 +710,43 @@ body::after {
   border-radius: 50%;
 }
 
-/* --- ADUSTES COMPLETOS Y LIMPIOS PARA CELULARES --- */
+/* --- ARREGLO INMEDIATO DE EMERGENCIA --- */
 @media (max-width: 768px) {
 
-  /* 1. Evitar que la pantalla se encoja o se mueva hacia los lados */
-  html, body {
-    overflow-x: hidden !important;
-    width: 100% !important;
-  }
-
-  /* 2. Sección de Bienvenida (Contenedor Principal) */
+  /* 1. ENDEREZAR LAS LETRAS DEL TÍTULO (Quita lo vertical) */
   section#inicio.hero {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
+    display: block !important;
     position: relative !important;
-    width: 100% !important;
-    min-height: 80vh !important;
-    padding: 30px 0 !important;
-    box-sizing: border-box !important;
+    padding: 50px 0 !important;
   }
-
-  /* 3. Alinear textos y botón de la bienvenida a la derecha */
   .hero-contenido {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-    text-align: right !important;
+    display: block !important;
     width: 100% !important;
-    padding-right: 20px !important;
-    padding-left: 20px !important;
+    text-align: right !important;
+    padding: 0 20px !important;
     box-sizing: border-box !important;
     z-index: 10 !important;
+    position: relative !important;
   }
-
-  /* Reducir el título principal para que no rompa la pantalla */
   .hero-contenido h1 {
-    font-size: 2.4rem !important; 
+    font-size: 2.3rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 12px !important;
-    width: 85% !important;
+    white-space: normal !important; /* Estira las palabras horizontalmente */
+    display: block !important;
+    width: 100% !important;
   }
-
-  /* Descripción compacta a la derecha */
   .hero-descripcion {
     font-size: 1.1rem !important;
-    line-height: 1.4 !important;
-    width: 75% !important;
-    margin-bottom: 20px !important;
+    width: 80% !important;
     margin-left: auto !important;
+    display: block !important;
   }
-
   .hero-boton {
-    align-self: flex-end !important;
+    display: inline-block !important;
+    margin-top: 15px !important;
   }
 
-  /* Círculo del conejo ubicado limpio a la izquierda en el fondo */
+  /* 2. ACOMODAR EL CONEJO DE FONDO A LA IZQUIERDA */
   .hero-logo {
     display: block !important;
     position: absolute !important;
@@ -775,61 +756,34 @@ body::after {
     right: auto !important;
     width: 75% !important;
     z-index: 1 !important;
-    opacity: 0.2 !important; /* Bien sutil para que no estorbe la lectura */
+    opacity: 0.2 !important; /* Sutil detrás del texto */
     pointer-events: none !important;
   }
+  .hero-logo img { width: 100% !important; height: auto !important; }
 
-  .hero-logo img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-
-  /* 4. SECCIÓN SEGUNDA: TÍTULO "CREAMOS LO QUE IMAGINAS" */
-  /* Busca la clase o etiqueta de este título y asegúrate de que baje su tamaño */
-  section.esencia h2, 
-  .titulo-esencia { 
-    font-size: 2.2rem !important; /* Tamaño normal y adaptable para celular */
-    text-align: center !important;
-    padding: 0 15px !important;
-    line-height: 1.2 !important;
-  }
-
-
-  /* 5. ORGANIZAR LAS TARJETAS HACIA ABAJO (VERTICAL) */
-  /* Forzamos a que el contenedor de las tarjetas las ponga en fila hacia abajo */
-  .contenedor-tarjetas, 
-  .cards-container,
-  section#esencia .grid { /* Pon aquí la clase real de la caja que envuelve las tarjetas */
+  /* 3. OBLIGAR A LAS TARJETAS A PONERSE UNA ABAJO DE OTRA */
+  /* Forzamos a todos los contenedores hijos de 'esencia' a ordenarse en vertical */
+  section#esencia div, .esencia div {
     display: flex !important;
-    flex-direction: column !important; /* Las apila una debajo de otra */
+    flex-direction: column !important; /* Apila las tarjetas verticalmente */
     align-items: center !important;
-    gap: 20px !important; /* Espacio entre cada tarjeta */
     width: 100% !important;
-    padding: 0 20px !important;
-    box-sizing: border-box !important;
+  }
+  /* Mantiene las tarjetas individuales con su tamaño correcto */
+  section#esencia div div, .esencia div div {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-bottom: 20px !important;
   }
 
-  /* Forzamos a que cada tarjeta individual use el ancho completo del celular */
-  .tarjeta, 
-  .card { /* Pon aquí la clase real de tus tarjetas */
-    width: 100% !important;
-    max-width: 340px !important; /* Para que no se estiren demasiado */
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-  }
-
-
-  /* 6. CORREGIR EL BOTÓN FLOTANTE DE WHATSAPP */
-  .whatsapp-btn,
-  .btn-whatsapp { /* Cambia esto por la clase real de tu icono de WhatsApp */
+  /* 4. REPARAR EL BOTÓN DE WHATSAPP */
+  .whatsapp-btn, a[href*="wa.me"], a[href*="whatsapp"] {
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
-    width: 55px !important;  /* Tamaño normal de la bola */
+    width: 55px !important;
     height: 55px !important;
-    z-index: 9999 !important; /* Siempre visible al frente */
+    z-index: 99999 !important;
   }
 }
-
 
