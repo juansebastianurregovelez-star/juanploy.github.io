@@ -708,67 +708,6 @@ body::after {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-}
-/* --- AJUSTES EXCLUSIVOS PARA TELÉFONOS MÓVILES --- */
-@media (max-width: 768px) {
-  
-  /* 1. Contenedor principal */
-  section#inicio.hero {
-    display: block !important;
-    position: relative !important;
-    overflow: hidden !important;
-    width: 100% !important;
-  }
-
-  /* 2. Empujar el bloque de texto y botón a la derecha */
-  .hero-contenido {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-end !important; /* Mueve todo a la derecha */
-    text-align: right !important;     /* Texto justificado a la derecha */
-    width: 100% !important;
-    padding-right: 25px !important;    /* Separación de la pantalla */
-    position: relative !important;
-    z-index: 5 !important;            /* El texto queda al frente */
-    box-sizing: border-box !important;
-  }
-
-  /* 3. Ajuste de tamaños del texto */
-  .hero-contenido h1 {
-    font-size: 3.2rem !important; 
-    line-height: 1.1 !important;
-    margin-bottom: 12px !important;
-    width: 85% !important; 
-  }
-
-  .hero-descripcion {
-    font-size: 1.3rem !important;
-    line-height: 1.4 !important;
-    width: 80% !important;
-    margin-bottom: 20px !important;
-  }
-
-  .hero-boton {
-    align-self: flex-end !important;
-  }
-
-  /* 4. Colocar el círculo del conejo original justo de fondo a la derecha */
-  .hero-logo {
-    display: block !important;       /* Fuerza a que aparezca */
-    position: absolute !important;   /* Lo vuelve flotante */
-    top: 25% !important;             /* Lo sube a la altura del título */
-    right: -15% !important;          /* Lo saca un poco de la pantalla por la derecha */
-    width: 80% !important;           /* Tamaño del círculo */
-    z-index: 1 !important;           /* Se va detrás de las letras */
-    opacity: 0.5 !important;         /* Transparencia para que el texto sea legible */
-    pointer-events: none !important; /* No estorba los clics */
-  }
-
-  .hero-logo img {
-    width: 100% !important;
-    height: auto !important;
-  }
-}
 /* Revisa que la sección de tu logo tenga estas líneas exactas al final de tu código */
   .hero-logo {
     display: block !important;
