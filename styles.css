@@ -792,3 +792,91 @@ body::after {
   }
 
   
+/* ==========================================
+   AJUSTES PARA CELULARES - JUANPLOY
+   No modifica los estilos de computador
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* ===== INICIO / PORTADA ===== */
+
+  section#inicio.hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    align-items: center !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 540px !important;
+    padding: 60px 22px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .hero-contenido {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-contenido h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    text-align: left !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    margin: 0 0 18px 0 !important;
+  }
+
+  .hero-descripcion {
+    width: 90% !important;
+    max-width: 360px !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    margin: 0 0 18px 0 !important;
+  }
+
+  .hero-boton {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  /* Logo del conejo como fondo */
+
+  .hero-logo {
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: -18% !important;
+    left: auto !important;
+    width: 78% !important;
+    max-width: 420px !important;
+    transform: translateY(-50%) !important;
+    opacity: 0.16 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .hero-logo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
