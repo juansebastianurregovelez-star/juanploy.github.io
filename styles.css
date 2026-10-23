@@ -709,39 +709,38 @@ body::after {
   object-position: center;
   border-radius: 50%;
 }
-
 /* --- AJUSTES EXCLUSIVOS PARA TELÉFONOS MÓVILES --- */
 @media (max-width: 768px) {
   
-  /* 1. Aseguramos el comportamiento del contenedor general */
-  section.hero {
-    position: relative !important;
-    overflow: hidden !important; /* Evita que el círculo se salga de la pantalla */
+  /* 1. Contenedor principal */
+  section#inicio.hero {
     display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
   }
 
-  /* 2. Movemos los textos y el botón hacia el lado derecho */
+  /* 2. Empujar el bloque de texto y botón a la derecha */
   .hero-contenido {
-    position: relative !important;
-    z-index: 3 !important; /* Coloca el texto POR ENCIMA del conejo para que sea legible */
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-end !important; /* Alinea los elementos al borde derecho */
-    text-align: right !important; /* Justifica el texto a la derecha */
+    align-items: flex-end !important; /* Mueve todo a la derecha */
+    text-align: right !important;     /* Texto justificado a la derecha */
     width: 100% !important;
-    padding-right: 20px !important; /* Despega el texto del borde de la pantalla */
+    padding-right: 25px !important;    /* Separación de la pantalla */
+    position: relative !important;
+    z-index: 5 !important;            /* El texto queda al frente */
     box-sizing: border-box !important;
   }
 
-  /* 3. Ajustamos el título a la derecha */
+  /* 3. Ajuste de tamaños del texto */
   .hero-contenido h1 {
-    font-size: 3.2rem !important; /* Tamaño grande para celular */
+    font-size: 3.2rem !important; 
     line-height: 1.1 !important;
-    margin-bottom: 15px !important;
-    width: 85% !important; /* Controla el ancho para que no ocupe toda la pantalla */
+    margin-bottom: 12px !important;
+    width: 85% !important; 
   }
 
-  /* 4. Ajustamos la descripción a la derecha */
   .hero-descripcion {
     font-size: 1.3rem !important;
     line-height: 1.4 !important;
@@ -749,26 +748,25 @@ body::after {
     margin-bottom: 20px !important;
   }
 
-  /* 5. Aseguramos que el botón se quede a la derecha */
   .hero-boton {
     align-self: flex-end !important;
   }
 
-  /* 6. CONVERTIMOS EL CONEJO EN EL FONDO DETRÁS DEL TEXTO */
+  /* 4. Colocar el círculo del conejo original justo de fondo a la derecha */
   .hero-logo {
-    display: block !important; /* Forzamos a que aparezca */
-    position: absolute !important;
-    top: 30% !important; /* Lo sube para colocarlo detrás de las letras principales */
-    right: -10% !important; /* Lo desplaza hacia la derecha donde está el texto */
-    width: 75% !important; /* Tamaño del círculo en el fondo */
-    z-index: 1 !important; /* Lo manda al fondo por debajo del texto */
-    opacity: 0.4 !important; /* Le da transparencia para que las letras se puedan leer bien */
-    pointer-events: none !important; /* Evita que estorbe al hacer clic en el botón */
+    display: block !important;       /* Fuerza a que aparezca */
+    position: absolute !important;   /* Lo vuelve flotante */
+    top: 25% !important;             /* Lo sube a la altura del título */
+    right: -15% !important;          /* Lo saca un poco de la pantalla por la derecha */
+    width: 80% !important;           /* Tamaño del círculo */
+    z-index: 1 !important;           /* Se va detrás de las letras */
+    opacity: 0.5 !important;         /* Transparencia para que el texto sea legible */
+    pointer-events: none !important; /* No estorba los clics */
   }
 
-  /* Ajuste para la imagen interna del conejo */
   .hero-logo img {
     width: 100% !important;
     height: auto !important;
   }
 }
+
