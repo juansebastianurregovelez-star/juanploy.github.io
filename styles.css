@@ -708,6 +708,8 @@ body::after {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+}
+
 ```css
 /* Ajustes para celulares */
 @media screen and (max-width: 768px) {
@@ -767,62 +769,4 @@ body::after {
 }
 ```
 
-Guarda el archivo y recarga la página en el celular. Si el título sigue saliendo vertical, mándame una captura de cómo se ve después de pegarlo.
-```css
-/* Ajustes para celulares */
-@media screen and (max-width: 768px) {
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
 
-  /* Título y texto de inicio */
-  .hero-contenido {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  .titulo-gigante {
-    max-width: 100%;
-    font-size: clamp(2rem, 9vw, 2.8rem);
-    line-height: 1.15;
-    white-space: normal;
-    overflow-wrap: normal;
-    word-break: normal;
-  }
-
-  .hero-descripcion {
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* Tarjetas una debajo de otra */
-  .esencia-fila-tarjetas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .tarjeta-proceso {
-    width: 90%;
-    max-width: 360px;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-```
