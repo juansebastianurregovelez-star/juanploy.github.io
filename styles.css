@@ -754,3 +754,44 @@ body::after {
     border-width: 6px;
   }
 }
+/* --- AJUSTES EXCLUSIVOS PARA TELÉFONOS MÓVILES --- */
+@media (max-width: 768px) {
+  
+  /* 1. Ponemos el logo del conejo como fondo del contenedor principal */
+  section.hero {
+    background-image: url('favicon.jpg') !important; /* Usamos tu favicon que contiene al conejo */
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 70% !important; /* Ajusta este porcentaje si quieres el conejo más grande o pequeño */
+    position: relative !important;
+  }
+
+  /* 2. Centramos el contenido sobre el fondo negro */
+  .hero-contenido {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    z-index: 2 !important; /* Asegura que el texto quede por encima del fondo */
+  }
+
+  /* 3. Forzamos a que el título principal se vea grande */
+  .hero-contenido h1 {
+    font-size: 3.5rem !important; /* Agranda la tipografía considerablemente */
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 4. Agrandamos la descripción para mejorar la lectura */
+  .hero-descripcion {
+    font-size: 1.4rem !important; 
+    line-height: 1.4 !important;
+    padding: 0 10px !important;
+  }
+
+  /* 5. Ocultamos el bloque original del conejo para que no aparezca abajo duplicado */
+  .hero-logo {
+    display: none !important;
+  }
+}
