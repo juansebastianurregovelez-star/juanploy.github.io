@@ -710,130 +710,176 @@ body::after {
   border-radius: 50%;
 }
 
-/* --- AJUSTES EXCLUSIVOS PARA TELÉFONOS --- */
+/* ==========================================
+   AJUSTES PARA CELULARES - JUANPLOY
+   No modifica los estilos de computador
+   ========================================== */
+
 @media screen and (max-width: 768px) {
 
-  /* PORTADA: título horizontal y organizado */
+  /* ===== INICIO / PORTADA ===== */
+
   section#inicio.hero {
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-columns: 1fr !important;
     align-items: center !important;
     position: relative !important;
-    padding: 55px 22px !important;
-    min-height: auto !important;
-    overflow: hidden;
+    width: 100% !important;
+    min-height: 540px !important;
+    padding: 60px 22px !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
-  section#inicio .hero-contenido {
+  .hero-contenido {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     position: relative !important;
     z-index: 2 !important;
     width: 100% !important;
     max-width: 100% !important;
-    min-width: 0 !important;
     padding: 0 !important;
-    text-align: left !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
   }
 
-  section#inicio .hero-contenido h1 {
+  .hero-contenido h1 {
     width: 100% !important;
     max-width: 100% !important;
-    font-size: clamp(2rem, 8vw, 3.2rem) !important;
-    line-height: 0.98 !important;
-    letter-spacing: -0.045em !important;
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    text-align: left !important;
     white-space: normal !important;
     overflow-wrap: normal !important;
     word-break: normal !important;
-    writing-mode: horizontal-tb !important;
-    margin: 18px 0 !important;
-    text-align: left !important;
+    margin: 0 0 18px 0 !important;
   }
 
-  section#inicio .hero-descripcion {
-    width: 100% !important;
+  .hero-descripcion {
+    width: 90% !important;
     max-width: 360px !important;
-    margin: 16px 0 !important;
     font-size: 1rem !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
     text-align: left !important;
+    margin: 0 0 18px 0 !important;
   }
 
-  section#inicio .hero-boton {
-    display: inline-block !important;
+  .hero-boton {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     max-width: 100% !important;
-    margin-top: 16px !important;
+    margin-top: 10px !important;
   }
 
-  /* LOGO: detrás del contenido, sin ocupar toda la portada */
-  section#inicio .hero-logo {
+  /* Logo del conejo como fondo */
+
+  .hero-logo {
+    display: block !important;
     position: absolute !important;
-    width: min(65vw, 280px) !important;
-    max-width: 65% !important;
-    left: auto !important;
-    right: -12% !important;
     top: 50% !important;
+    right: -18% !important;
+    left: auto !important;
+    width: 78% !important;
+    max-width: 420px !important;
     transform: translateY(-50%) !important;
-    z-index: 1 !important;
     opacity: 0.16 !important;
+    z-index: 1 !important;
     pointer-events: none !important;
   }
 
-  section#inicio .hero-logo img {
+  .hero-logo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+
+  /* ===== SECCIÓN: CREAMOS LO QUE IMAGINAS ===== */
+
+  section#esencia,
+  .esencia {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
+    padding: 35px 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
-  /* ESENCIA: reducir el título y conservar las tarjetas */
-  section#esencia,
-  .esencia {
-    box-sizing: border-box !important;
-    max-width: 100% !important;
-  }
+  /* Título más pequeño */
 
   section#esencia h1,
   section#esencia h2,
   .esencia h1,
   .esencia h2 {
-    font-size: clamp(2rem, 8vw, 3.5rem) !important;
-    line-height: 1.02 !important;
-    letter-spacing: -0.04em !important;
-    overflow-wrap: normal !important;
-    word-break: normal !important;
-  }
-
-  section#esencia .contenedor,
-  .esencia .contenedor {
     width: 100% !important;
     max-width: 100% !important;
+    font-size: clamp(1.5rem, 6vw, 2.1rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    margin: 0 auto 28px auto !important;
     box-sizing: border-box !important;
   }
 
-  /* Evita imponer estilos a TODOS los div de la sección */
+  /* Contenedores de tarjetas:
+     organiza los grupos de contenido en columna */
+
   section#esencia .tarjetas,
-  .esencia .tarjetas {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 18px !important;
+  .esencia .tarjetas,
+  section#esencia .servicios,
+  .esencia .servicios,
+  section#esencia .cards,
+  .esencia .cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 24px !important;
     width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Las tarjetas solo se ajustan si tienen esta clase */
-  section#esencia .tarjeta,
-  .esencia .tarjeta {
-    width: 100% !important;
-    max-width: 360px !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
   }
 
-  /* BOTÓN DE WHATSAPP */
+  /* Cada tarjeta, una debajo de la otra */
+
+  section#esencia .tarjeta,
+  .esencia .tarjeta,
+  section#esencia .card,
+  .esencia .card,
+  section#esencia .servicio,
+  .esencia .servicio {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    min-width: 0 !important;
+    margin: 0 auto 24px auto !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* ===== BOTÓN FLOTANTE DE WHATSAPP ===== */
+
   .whatsapp-btn,
   a[href*="wa.me"],
   a[href*="whatsapp"] {
-    z-index: 9999 !important;
+    position: fixed !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    width: 55px !important;
+    height: 55px !important;
+    z-index: 99999 !important;
   }
+
 }
