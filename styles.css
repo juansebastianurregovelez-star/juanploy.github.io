@@ -769,3 +769,17 @@ body::after {
     height: auto !important;
   }
 }
+/* Revisa que la sección de tu logo tenga estas líneas exactas al final de tu código */
+  .hero-logo {
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;             
+    transform: translateY(-50%) !important; /* Lo centra verticalmente de forma perfecta */
+    left: -15% !important;           /* Lo avienta por completo al lado izquierdo */
+    right: auto !important;          /* Cancela el movimiento a la derecha anterior */
+    margin: 0 !important;            /* Elimina márgenes heredados de la PC */
+    width: 80% !important;           
+    z-index: 1 !important;           
+    opacity: 0.25 !important;        
+    pointer-events: none !important;
+  }
