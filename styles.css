@@ -1434,3 +1434,27 @@ button {
     display: none !important;
   }
 }
+
+/* OCULTAR LOGOS Y PANTALLA DE CARGA SOLO EN PC */
+@media screen and (min-width: 731px) {
+  /* Ocultar la pantalla de carga si sigue apareciendo */
+  #preloader,
+  #intro {
+    display: none !important;
+  }
+
+  /* Ocultar la imagen del logo en la barra */
+  header img,
+  header .logo img,
+  header .marca-juanploy img {
+    display: none !important;
+  }
+
+  /* Ocultar el conejo grande de la portada */
+  #inicio .hero-logo,
+  #inicio .hero-logo img,
+  #inicio .rabbit,
+  #inicio .rabbit img {
+    display: none !important;
+  }
+}
