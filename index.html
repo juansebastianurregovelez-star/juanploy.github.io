@@ -83,7 +83,26 @@
 }
 </style>
 </head>
-<body></style>
+<body></style><style>
+/* OCULTAR BARRA Y LOGOS SOLO EN PC */
+@media screen and (min-width: 731px) {
+  html body header.barra-juanploy {
+    display: none !important;
+  }
+
+  html body #inicio .hero-logo,
+  html body #inicio .hero-logo img {
+    display: none !important;
+  }
+}
+
+/* CONSERVAR LA BARRA EN CELULARES */
+@media screen and (max-width: 730px) {
+  html body header.barra-juanploy {
+    display: flex !important;
+  }
+}
+</style>
 </head>
 <body><!-- BARRA DE NAVEGACIÓN JUANPLOY -->
 <header class="barra-juanploy">
