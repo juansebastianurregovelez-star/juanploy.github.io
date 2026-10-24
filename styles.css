@@ -1129,3 +1129,11 @@ button {
   -webkit-touch-callout: none;
 }
   
+/* FONDO NEGRO TIPO VIDRIO AHUMADO */
+.barra-juanploy {
+  background: rgba(12, 12, 12, 0.78) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+  backdrop-filter: blur(12px) saturate(140%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18) !important;
+}
