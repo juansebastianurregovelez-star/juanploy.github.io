@@ -742,3 +742,38 @@ section#contacto,
     background: #000000 !important;
 }
 
+/* CORREGIR INICIO EN CELULARES */
+@media screen and (max-width: 600px) {
+  #inicio.hero {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 35px 20px;
+    overflow: hidden;
+  }
+
+  #inicio .hero-contenido {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  #inicio .hero-contenido h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(38px, 10vw, 58px);
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  #inicio .hero-etiqueta,
+  #inicio .hero-descripcion {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
