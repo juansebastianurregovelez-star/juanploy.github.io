@@ -709,3 +709,14 @@ body::after {
   object-position: center;
   border-radius: 50%;
 }
+<!-- PANTALLA DE CARGA (PRELOADER) -->
+<div id="preloader">
+    <div class="preloader-contenido">
+        <img src="miniatura.jpg" alt="Logo Juanploy" class="preloader-logo">
+        <h1 class="preloader-texto">Juanploy</h1>
+    </div>
+</div>
+
+<!-- BIENVENIDA JUANPLOY -->
+<section id="inicio" class="hero">
+    <div class="hero-contenido">
