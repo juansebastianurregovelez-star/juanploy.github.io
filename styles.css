@@ -1272,3 +1272,82 @@ button {
     white-space: nowrap !important;
   }
 }
+
+/* CORRECCIÓN DEFINITIVA DEL LOGO EN PC */
+@media (min-width: 731px) {
+
+  /* El logo de la barra debe ser pequeño */
+  header.barra-juanploy > a.marca-juanploy {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    flex: 0 0 auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  header.barra-juanploy > a.marca-juanploy img {
+    display: block !important;
+    position: static !important;
+    inset: auto !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  header.barra-juanploy > a.marca-juanploy span {
+    display: inline-block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    color: #fff !important;
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Impedir que el logo principal invada la pantalla */
+  #inicio .hero-logo {
+    display: flex !important;
+    position: relative !important;
+    width: 260px !important;
+    height: 260px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 260px !important;
+    max-height: 260px !important;
+    overflow: hidden !important;
+    justify-self: center !important;
+    align-self: center !important;
+  }
+
+  #inicio .hero-logo img {
+    display: block !important;
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+}
