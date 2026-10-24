@@ -1153,4 +1153,15 @@ button {
 
 
 
- 
+/* QUITAR BARRA Y LOGOS SOLO EN PC */
+@media screen and (min-width: 731px) {
+  body header,
+  body .barra-juanploy,
+  body .nav-juanploy,
+  body #inicio .hero-logo,
+  body #inicio .rabbit,
+  body #preloader,
+  body #intro {
+    display: none !important;
+  }
+} 
