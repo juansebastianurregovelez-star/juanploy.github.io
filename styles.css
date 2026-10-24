@@ -849,4 +849,303 @@ section#contacto,
 }
 </style>
 </head>
- 
+ /* BARRA DE NAVEGACIÓN JUANPLOY */
+.barra-juanploy {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 76px;
+  padding: 14px 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #080909;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 100;
+}
+
+/* CONEJO Y NOMBRE */
+.barra-juanploy .marca-juanploy {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.barra-juanploy .marca-juanploy img {
+  display: block;
+  width: 36px !important;
+  height: 36px !important;
+  max-width: 36px !important;
+  max-height: 36px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: 0;
+  position: static;
+}
+
+/* ENLACES */
+.barra-juanploy .nav-juanploy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(12px, 2vw, 28px);
+  min-width: 0;
+}
+
+.barra-juanploy .nav-juanploy a {
+  display: inline-block;
+  color: #eee;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.barra-juanploy .nav-juanploy a:hover {
+  color: #25d366;
+}
+
+/* CELULARES */
+@media (max-width: 700px) {
+  .barra-juanploy {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 12px;
+  }
+
+  .barra-juanploy .marca-juanploy {
+    font-size: 23px;
+    font-weight: 900;
+  }
+
+  .barra-juanploy .marca-juanploy img {
+    width: 34px !important;
+    height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+  }
+
+  .barra-juanploy .nav-juanploy {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .barra-juanploy .nav-juanploy a {
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CORRECCIÓN RESPONSIVE JUANPLOY */
+.barra-juanploy {
+  width: 100%;
+  min-height: 76px;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #080909;
+}
+
+.barra-juanploy .marca-juanploy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 9px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.barra-juanploy .marca-juanploy img {
+  display: block;
+  width: 36px !important;
+  height: 36px !important;
+  max-width: 36px !important;
+  max-height: 36px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.barra-juanploy .nav-juanploy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  min-width: 0;
+}
+
+.barra-juanploy .nav-juanploy a {
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* LOGO PRINCIPAL: NO DEJAR QUE CREZCA SIN LÍMITE */
+#inicio .hero-logo {
+  width: min(100%, 360px);
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  justify-self: center;
+  overflow: hidden;
+}
+
+#inicio .hero-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* CELULAR */
+@media (max-width: 730px) {
+  .barra-juanploy {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+
+  .barra-juanploy .marca-juanploy {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .barra-juanploy .marca-juanploy img {
+    width: 30px !important;
+    height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+  }
+
+  .barra-juanploy .nav-juanploy {
+    flex: 1;
+    justify-content: flex-start;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .barra-juanploy .nav-juanploy::-webkit-scrollbar {
+    display: none;
+  }
+
+  .barra-juanploy .nav-juanploy a {
+    flex: 0 0 auto;
+    font-size: 11px;
+  }
+
+  #inicio .hero-logo {
+    width: 235px;
+    max-width: 65%;
+  }
+}
+/* AJUSTES DE LA BARRA Y DEL LOGO */
+
+/* Barra más pequeña y con fondo transparente */
+.barra-juanploy {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 7px 18px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  gap: 12px !important;
+}
+
+/* Logo pequeño en la barra */
+.barra-juanploy .marca-juanploy img {
+  width: 30px !important;
+  height: 30px !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
+}
+
+
+
+/* Ajustes para celular */
+@media (max-width: 730px) {
+  .barra-juanploy {
+    padding: 5px 10px !important;
+  }
+
+  #inicio .hero-logo {
+    width: 235px !important;
+    height: 235px !important;
+  }
+}
+  /* EVITAR SELECCIÓN DE TEXTO EN LA PÁGINA */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* EVITAR EL RESALTADO AZUL AL TOCAR */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* MANTENER FUNCIONANDO LOS BOTONES Y ENLACES */
+a,
+button {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+  
+/* FONDO NEGRO TIPO VIDRIO AHUMADO */
+.barra-juanploy {
+  background: rgba(12, 12, 12, 0.78) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+  backdrop-filter: blur(12px) saturate(140%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18) !important;
+}
+
+
+
+/* QUITAR BARRA Y LOGOS SOLO EN PC */
+@media screen and (min-width: 731px) {
+  body header,
+  body .barra-juanploy,
+  body .nav-juanploy,
+  body #inicio .hero-logo,
+  body #inicio .rabbit,
+  body #preloader,
+  body #intro {
+    display: none !important;
+  }
+}
