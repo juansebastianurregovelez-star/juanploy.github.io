@@ -1200,3 +1200,42 @@ button {
     transform: none;
   }
 }
+
+/* LOGO DE LA BARRA: CORRECCIÓN SOLO PARA PC */
+@media screen and (min-width: 731px) {
+  header.barra-juanploy a.marca-juanploy {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    width: auto !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  header.barra-juanploy a.marca-juanploy img {
+    display: block !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+  }
+
+  header.barra-juanploy a.marca-juanploy span {
+    display: inline-block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+}
