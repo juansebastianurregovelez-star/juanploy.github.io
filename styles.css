@@ -1137,9 +1137,11 @@ button {
 
 /* BARRA JUANPLOY: SOLO EN CELULARES */
 
-/* Ocultar en PC y laptop */
+/* OCULTAR BARRA Y PRELOADER SOLO EN PC */
 @media screen and (min-width: 731px) {
-  html body header.barra-juanploy {
+  body header.barra-juanploy,
+  body #preloader,
+  body #intro {
     display: none !important;
   }
 }
