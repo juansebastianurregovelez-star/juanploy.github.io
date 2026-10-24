@@ -1400,3 +1400,29 @@ button {
     white-space: nowrap !important;
   }
 }
+/* CORRECCIÓN FINAL: OCULTAR LOGOS SOLO EN PC */
+@media screen and (min-width: 731px) {
+
+  /* Ocultar imagen del logo de la barra */
+  html body header.barra-juanploy .marca-juanploy img,
+  html body header.barra-juanploy a.marca-juanploy img,
+  html body header .logo img {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Ocultar logo grande de la portada */
+  html body #inicio .hero-logo,
+  html body #inicio .hero-logo img {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Mantener visible el texto JUANPLOY */
+  html body header.barra-juanploy .marca-juanploy span {
+    display: inline-block !important;
+    visibility: visible !important;
+  }
+}
