@@ -824,14 +824,14 @@ section#contacto,
     pointer-events: none;
   }
 #inicio.hero {
-    position: relative;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    min-height: 0;
-    height: auto;
-    padding: 65px 22px 30px;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 680px;
+  height: auto;
+  padding: 55px 22px 40px;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
