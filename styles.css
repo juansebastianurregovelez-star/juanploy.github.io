@@ -817,37 +817,36 @@ section h6,
 .subtitle {
     color: #00FF66 !important;
 }
-/* --- AJUSTE PERFECTO PARA INICIO (HERO) --- */
-section#inicio.hero, 
-#inicio,
-.hero {
+/* --- REGRESA LA ESTRUCTURA ORIGINAL EN PC Y ARREGLA EL MÓVIL --- */
+section#inicio.hero {
     min-height: 100vh !important; /* Ocupa toda la pantalla completa */
-    padding: 40px 20px !important;
+    padding: 80px 40px !important;
     display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: space-between !important; /* Mantiene texto a la izquierda y logo a la derecha en PC */
+    flex-direction: row !important; 
     box-sizing: border-box !important;
 }
 
-/* Controla el texto principal en computadoras y celulares */
-section#inicio.hero h1,
-#inicio h1,
-.hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+/* En la PC el texto se alinea a la izquierda */
+section#inicio.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
     line-height: 1.1 !important;
-    max-width: 800px !important; 
+    max-width: 600px !important; 
     width: 100% !important;
-    text-align: center !important; /* Centrado elegante */
-    margin-bottom: 20px !important;
+    text-align: left !important; 
 }
 
-/* Controla que el logo de fondo no se agigante en PC */
-.hero-contenido {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    max-width: 1200px !important;
-    width: 100% !important;
+/* --- AJUSTE EXCLUSIVO PARA CELULARES --- */
+@media screen and (max-width: 768px) {
+    section#inicio.hero {
+        flex-direction: column !important; /* En celular se pone uno abajo del otro */
+        justify-content: center !important;
+        padding: 40px 20px !important;
+        text-align: center !important;
+    }
+    
+    section#inicio.hero h1 {
+        text-align: center !important;
+    }
 }
