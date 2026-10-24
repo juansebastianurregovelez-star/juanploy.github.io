@@ -835,20 +835,20 @@ section#contacto,
     box-sizing: border-box;
     overflow: hidden;
 }
-  /* OCULTAR LOGOS SOLAMENTE EN PC */
+
+/* OCULTAR LOGO SOLO EN PC */
 @media screen and (min-width: 731px) {
-  header.barra-juanploy > a.marca-juanploy img {
+  header.barra-juanploy .marca-juanploy img {
     display: none !important;
   }
 
-  #inicio .hero-logo {
-    display: none !important;
-  }
-
+  #inicio .hero-logo,
   #inicio .hero-logo img {
     display: none !important;
   }
 }
+</style>
+</head>
  
 /* BARRA DE NAVEGACIÓN JUANPLOY */
 .barra-juanploy {
