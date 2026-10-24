@@ -1450,30 +1450,3 @@ button {
     display: none !important;
   }
   
-/* OCULTAR LOGOS SOLO EN PC */
-@media screen and (min-width: 731px) {
-  #preloader {
-    display: none !important;
-  }
-
-  header.barra-juanploy .marca-juanploy img {
-    display: none !important;
-  }
-
-  #inicio .hero-logo,
-  #inicio .hero-logo img {
-    display: none !important;
-  }
-}
-
-
-  /* Quitar los logos de la portada */
-  #inicio .hero-logo,
-  #inicio .hero-logo img,
-  .preloader-logo,
-  #preloader .preloader-logo,
-  #inicio .rabbit {
-    display: none !important;
-  }
-
-}
