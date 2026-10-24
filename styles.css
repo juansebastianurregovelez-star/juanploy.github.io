@@ -721,7 +721,17 @@ body::after {
 <section id="inicio" class="hero">
     <div class="hero-contenido">
 } 
-
+} 
+section#contacto, 
+.contacto,
+#contacto {
+    background-color: #000000 !important;
+    background: #000000 !important;
+}
+body, section, #contacto, .contacto {
+    background-color: #000000 !important;
+    background: #000000 !important;
+}
 /* ESTO VA AL FINAL DE TODO EL ARCHIVO */
 body, 
 section, 
@@ -731,3 +741,6 @@ section#contacto,
     background-color: #000000 !important;
     background: #000000 !important;
 }
+
+ 
+
