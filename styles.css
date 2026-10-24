@@ -720,3 +720,14 @@ body::after {
 <!-- BIENVENIDA JUANPLOY -->
 <section id="inicio" class="hero">
     <div class="hero-contenido">
+} 
+
+/* ESTO VA AL FINAL DE TODO EL ARCHIVO */
+body, 
+section, 
+section#contacto, 
+.contacto, 
+#contacto {
+    background-color: #000000 !important;
+    background: #000000 !important;
+}
