@@ -1137,7 +1137,7 @@ button {
   border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18) !important;
 }
-/* BARRA TRANSPARENTE Y ORGANIZADA EN PC */
+/* BARRA JUANPLOY - CORRECCIÓN PARA PC */
 @media (min-width: 731px) {
   .barra-juanploy {
     display: flex !important;
@@ -1146,13 +1146,21 @@ button {
     justify-content: space-between !important;
     flex-wrap: nowrap !important;
     width: 100% !important;
-    min-height: 0 !important;
+    min-height: 64px !important;
     height: auto !important;
-    padding: 8px 24px !important;
+    padding: 10px 24px !important;
     gap: 20px !important;
     box-sizing: border-box !important;
-    background: transparent !important;
-    box-shadow: none !important;
+
+    background: rgba(12, 12, 12, 0.78) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+    backdrop-filter: blur(12px) saturate(140%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18) !important;
+
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
   }
 
   .barra-juanploy .marca-juanploy {
@@ -1162,6 +1170,7 @@ button {
     flex-shrink: 0 !important;
     white-space: nowrap !important;
     gap: 8px !important;
+    font-size: 17px !important;
   }
 
   .barra-juanploy .marca-juanploy img {
@@ -1178,7 +1187,7 @@ button {
     align-items: center !important;
     justify-content: flex-end !important;
     flex-wrap: nowrap !important;
-    gap: 16px !important;
+    gap: clamp(10px, 1.4vw, 20px) !important;
     min-width: 0 !important;
     white-space: nowrap !important;
   }
@@ -1187,22 +1196,7 @@ button {
     display: inline-block !important;
     flex-shrink: 0 !important;
     white-space: nowrap !important;
-    font-size: 13px !important;
-  }
-
-  #inicio .hero-logo {
-    width: 260px !important;
-    height: 260px !important;
-    max-width: 260px !important;
-    max-height: 260px !important;
-    overflow: hidden !important;
-  }
-
-  #inicio .hero-logo img {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: contain !important;
+    font-size: 12px !important;
+    transform: none;
   }
 }
