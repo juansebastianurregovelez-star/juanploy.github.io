@@ -1135,17 +1135,18 @@ button {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18) !important;
 }
 
+/* BARRA JUANPLOY: SOLO EN CELULARES */
 
-
-/* QUITAR BARRA Y LOGOS SOLO EN PC */
+/* Ocultar en PC y laptop */
 @media screen and (min-width: 731px) {
-  body header,
-  body .barra-juanploy,
-  body .nav-juanploy,
-  body #inicio .hero-logo,
-  body #inicio .rabbit,
-  body #preloader,
-  body #intro {
+  html body header.barra-juanploy {
     display: none !important;
+  }
+}
+
+/* Mostrar en celulares */
+@media screen and (max-width: 730px) {
+  html body header.barra-juanploy {
+    display: flex !important;
   }
 }
