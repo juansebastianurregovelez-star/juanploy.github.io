@@ -1426,3 +1426,11 @@ button {
     visibility: visible !important;
   }
 }
+/* OCULTAR EL LOGO SOLO EN PC */
+@media screen and (min-width: 731px) {
+  .barra-juanploy .marca-juanploy img,
+  #inicio .hero-logo,
+  #inicio .hero-logo img {
+    display: none !important;
+  }
+}
