@@ -742,38 +742,78 @@ section#contacto,
     background: #000000 !important;
 }
 
-/* CORREGIR INICIO EN CELULARES */
+/* INICIO JUANPLOY EN CELULARES */
 @media screen and (max-width: 600px) {
   #inicio.hero {
+    position: relative;
+    display: block;
     width: 100%;
     max-width: 100%;
+    padding: 38px 22px 50px;
     box-sizing: border-box;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-    padding: 35px 20px;
     overflow: hidden;
   }
 
   #inicio .hero-contenido {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
   }
 
+  /* TÍTULO MÁS GRANDE */
   #inicio .hero-contenido h1 {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 100%;
-    font-size: clamp(38px, 10vw, 58px);
+    font-size: clamp(42px, 11vw, 62px);
     line-height: 0.98;
     letter-spacing: -1.5px;
-    word-break: normal;
     overflow-wrap: normal;
+    word-break: normal;
   }
 
-  #inicio .hero-etiqueta,
+  /* DESCRIPCIÓN MÁS GRANDE */
   #inicio .hero-descripcion {
+    font-size: 18px;
+    line-height: 1.6;
     max-width: 100%;
-    overflow-wrap: break-word;
+    position: relative;
+    z-index: 2;
+  }
+
+  #inicio .hero-etiqueta {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  /* CONEJO COMO FONDO */
+  #inicio .hero-logo {
+    position: absolute;
+    top: 100px;
+    right: -55px;
+    width: 260px;
+    max-width: 75%;
+    z-index: 1;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  #inicio .hero-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #inicio .hero-boton {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
