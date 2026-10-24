@@ -1137,3 +1137,72 @@ button {
   border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18) !important;
 }
+/* BARRA TRANSPARENTE Y ORGANIZADA EN PC */
+@media (min-width: 731px) {
+  .barra-juanploy {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 8px 24px !important;
+    gap: 20px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .barra-juanploy .marca-juanploy {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    gap: 8px !important;
+  }
+
+  .barra-juanploy .marca-juanploy img {
+    width: 34px !important;
+    height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  .barra-juanploy .nav-juanploy {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    gap: 16px !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .barra-juanploy .nav-juanploy a {
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+  }
+
+  #inicio .hero-logo {
+    width: 260px !important;
+    height: 260px !important;
+    max-width: 260px !important;
+    max-height: 260px !important;
+    overflow: hidden !important;
+  }
+
+  #inicio .hero-logo img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+}
