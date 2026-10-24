@@ -742,14 +742,17 @@ section#contacto,
     background: #000000 !important;
 }
 
-/* INICIO JUANPLOY - CELULARES */
+/* JUANPLOY - INICIO COMPACTO PARA CELULARES */
 @media screen and (max-width: 600px) {
   #inicio.hero {
     position: relative;
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: 65px 24px 55px;
+    min-height: 0;
+    height: auto;
+    padding: 38px 22px 30px;
+    margin: 0;
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -758,61 +761,64 @@ section#contacto,
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 340px;
+    max-width: 100%;
     min-width: 0;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
     box-sizing: border-box;
   }
 
-  /* TÍTULO CENTRADO */
+  /* TÍTULO GRANDE A LA IZQUIERDA */
   #inicio .hero-contenido h1 {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 22px;
-    font-size: clamp(42px, 11vw, 62px);
+    margin: 0 0 20px;
+    font-size: clamp(42px, 10.5vw, 58px);
     line-height: 0.98;
     letter-spacing: -1.5px;
-    text-align: center;
+    text-align: left;
     overflow-wrap: normal;
     word-break: normal;
   }
 
-  /* ETIQUETA SUPERIOR */
+  /* ETIQUETA */
   #inicio .hero-etiqueta {
-    margin-bottom: 24px;
+    margin: 0 0 22px;
     font-size: 13px;
     letter-spacing: 2px;
-    text-align: center;
+    text-align: left;
   }
 
-  /* DESCRIPCIÓN MÁS ESTRECHA Y CENTRADA */
+  /* DESCRIPCIÓN LEGIBLE */
   #inicio .hero-descripcion {
-    max-width: 310px;
-    margin: 0 auto 25px;
+    width: 90%;
+    max-width: 330px;
+    margin: 0 0 22px;
     font-size: 18px;
-    line-height: 1.55;
-    text-align: center;
+    line-height: 1.5;
+    text-align: left;
   }
 
-  /* BOTÓN CENTRADO */
+  /* BOTÓN A LA IZQUIERDA */
   #inicio .hero-boton {
-    display: flex;
+    display: inline-flex;
     width: fit-content;
     max-width: 100%;
-    margin: 0 auto;
-    justify-content: center;
+    margin: 0;
     font-size: 16px;
     box-sizing: border-box;
   }
 
-  /* CONEJO DE FONDO */
+  /* CONEJO A LA DERECHA, DE FONDO */
   #inicio .hero-logo {
     position: absolute;
-    top: 125px;
-    right: -45px;
-    width: 250px;
-    max-width: 75%;
+    top: 115px;
+    right: -65px;
+    bottom: auto;
+    left: auto;
+    width: 235px;
+    max-width: 65%;
+    margin: 0;
     z-index: 1;
     opacity: 0.18;
     pointer-events: none;
