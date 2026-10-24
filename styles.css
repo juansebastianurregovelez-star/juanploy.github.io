@@ -742,38 +742,19 @@ section#contacto,
     background: #000000 !important;
 }
 
- /* --- AJUSTE PERFECTO PARA INICIO (HERO) --- */
-section#inicio.hero, 
-#inicio,
-.hero {
-    min-height: 100vh !important; /* Ocupa toda la pantalla completa */
-    padding: 40px 20px !important;
+ /* --- CORRECCIÓN DE LA SECCIÓN DE INICIO (HERO) --- */
+section#inicio.hero {
+    min-height: 80vh !important; /* Mantiene una altura excelente y proporcional en PC y móvil */
+    padding: 60px 22px !important;
     display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    box-sizing: border-box !important;
 }
 
-/* Controla el texto principal en computadoras y celulares */
-section#inicio.hero h1,
-#inicio h1,
-.hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+/* Evita que el texto grande se rompa en palabras cortas en la PC */
+section#inicio.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem) !important; /* Se encoge en celulares y crece en PC */
     line-height: 1.1 !important;
-    max-width: 800px !important; 
-    width: 100% !important;
-    text-align: center !important; /* Centrado elegante */
-    margin-bottom: 20px !important;
-}
-
-/* Controla que el logo de fondo no se agigante en PC */
-.hero-contenido {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    max-width: 1200px !important;
+    max-width: 600px !important; /* Le da espacio al texto para que no se amontone */
     width: 100% !important;
 }
-
