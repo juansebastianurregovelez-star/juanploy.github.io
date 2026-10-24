@@ -830,7 +830,8 @@ section#contacto,
   max-width: 100%;
   min-height: 680px;
   height: auto;
-  padding: 55px 22px 40px;
+  padding: 135px 22px 30px;
+  margin-top: 60px;
   margin: 0;
   box-sizing: border-box;
   overflow: hidden;
