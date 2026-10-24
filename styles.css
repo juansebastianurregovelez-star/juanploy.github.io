@@ -1094,22 +1094,7 @@ html {
   max-height: 30px !important;
 }
 
-/* Logo del conejo en la pantalla principal */
-#inicio .hero-logo {
-  width: 300px !important;
-  max-width: 100% !important;
-  height: 300px !important;
-  max-height: 300px !important;
-  overflow: hidden !important;
-}
 
-#inicio .hero-logo img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-}
 
 /* Ajustes para celular */
 @media (max-width: 730px) {
