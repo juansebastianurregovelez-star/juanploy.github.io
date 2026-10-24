@@ -83,20 +83,16 @@
 }
 </style>
 </head>
-<body></style><style>
-/* OCULTAR BARRA Y LOGOS SOLO EN PC */
+<body></style>
+<style>
+/* PC: ocultar únicamente la barra de navegación */
 @media screen and (min-width: 731px) {
   html body header.barra-juanploy {
     display: none !important;
   }
-
-  html body #inicio .hero-logo,
-  html body #inicio .hero-logo img {
-    display: none !important;
-  }
 }
 
-/* CONSERVAR LA BARRA EN CELULARES */
+/* CELULAR: conservar la barra */
 @media screen and (max-width: 730px) {
   html body header.barra-juanploy {
     display: flex !important;
