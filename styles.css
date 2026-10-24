@@ -1061,3 +1061,71 @@ html {
     max-width: 65%;
   }
 }
+/* AJUSTES DE LA BARRA Y DEL LOGO */
+
+/* Barra más pequeña y con fondo transparente */
+.barra-juanploy {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 7px 18px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  gap: 12px !important;
+}
+
+/* Logo pequeño en la barra */
+.barra-juanploy .marca-juanploy img {
+  width: 30px !important;
+  height: 30px !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
+}
+
+/* Logo del conejo en la pantalla principal */
+#inicio .hero-logo {
+  width: 300px !important;
+  max-width: 100% !important;
+  height: 300px !important;
+  max-height: 300px !important;
+  overflow: hidden !important;
+}
+
+#inicio .hero-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Ajustes para celular */
+@media (max-width: 730px) {
+  .barra-juanploy {
+    padding: 5px 10px !important;
+  }
+
+  #inicio .hero-logo {
+    width: 235px !important;
+    height: 235px !important;
+  }
+}
+  /* EVITAR SELECCIÓN DE TEXTO EN LA PÁGINA */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* EVITAR EL RESALTADO AZUL AL TOCAR */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* MANTENER FUNCIONANDO LOS BOTONES Y ENLACES */
+a,
+button {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+  
