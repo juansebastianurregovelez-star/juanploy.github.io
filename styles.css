@@ -1465,3 +1465,9 @@ button {
     display: none !important;
   }
 }
+/* OCULTAR LA IMAGEN DEL PRELOADER SOLO EN PC */
+@media screen and (min-width: 731px) {
+  #preloader .preloader-logo {
+    display: none !important;
+  }
+}
