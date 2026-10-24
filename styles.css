@@ -1239,3 +1239,36 @@ button {
     white-space: nowrap !important;
   }
 }
+/* ARREGLO DEFINITIVO DEL LOGO EN LA BARRA DE PC */
+@media screen and (min-width: 731px) {
+  header.barra-juanploy > a.marca-juanploy {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: fit-content !important;
+    height: 64px !important;
+    overflow: hidden !important;
+  }
+
+  header.barra-juanploy > a.marca-juanploy img {
+    display: block !important;
+    position: static !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    flex: 0 0 34px !important;
+    transform: none !important;
+  }
+
+  header.barra-juanploy > a.marca-juanploy span {
+    position: static !important;
+    display: inline-block !important;
+    font-size: 17px !important;
+    white-space: nowrap !important;
+  }
+}
