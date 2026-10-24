@@ -1450,43 +1450,18 @@ button {
     display: none !important;
   }
   
-/* OCULTAR LOGOS SOLO EN PC: REGLA FINAL */
+/* OCULTAR LOGOS SOLO EN PC */
 @media screen and (min-width: 731px) {
-  /* Logo de la barra */
-  html body header.barra-juanploy .marca-juanploy img,
-  html body header .logo img {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-  }
-
-  /* Logo grande y conejo de la portada */
-  html body #inicio .hero-logo,
-  html body #inicio .rabbit {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  html body #inicio .hero-logo img,
-  html body #inicio .rabbit img {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  /* Ocultar también la pantalla de carga en PC */
-  html body #preloader,
-  html body #intro {
+  #preloader {
     display: none !important;
   }
-}
 
+  header.barra-juanploy .marca-juanploy img {
+    display: none !important;
+  }
 
-  /* Ocultar el conejo grande de la portada */
   #inicio .hero-logo,
-  #inicio .hero-logo img,
-  #inicio .rabbit,
-  #inicio .rabbit img {
+  #inicio .hero-logo img {
     display: none !important;
   }
 }
