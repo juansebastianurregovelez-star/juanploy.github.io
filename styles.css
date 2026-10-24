@@ -1465,9 +1465,15 @@ button {
     display: none !important;
   }
 }
-/* OCULTAR LA IMAGEN DEL PRELOADER SOLO EN PC */
-@media screen and (min-width: 731px) {
-  #preloader .preloader-logo {
+
+
+  /* Quitar los logos de la portada */
+  #inicio .hero-logo,
+  #inicio .hero-logo img,
+  .preloader-logo,
+  #preloader .preloader-logo,
+  #inicio .rabbit {
     display: none !important;
   }
+
 }
