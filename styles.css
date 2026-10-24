@@ -1351,3 +1351,53 @@ button {
     margin: 0 !important;
   }
 }
+
+/* CORRECCIÓN DEFINITIVA DEL LOGO PRINCIPAL EN PC */
+@media (min-width: 731px) {
+  #inicio {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 32px !important;
+    overflow: hidden !important;
+  }
+
+  #inicio .hero-contenido {
+    min-width: 0 !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  #inicio .hero-logo {
+    display: flex !important;
+    position: relative !important;
+    inset: auto !important;
+    width: min(100%, 360px) !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    max-width: 360px !important;
+    max-height: 360px !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+    justify-self: center !important;
+    z-index: 1 !important;
+  }
+
+  #inicio .hero-logo img {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+  }
+
+  header.barra-juanploy .marca-juanploy {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+}
