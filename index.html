@@ -976,6 +976,7 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
 }
 </style>
 <style>
+
 /* ===== INTRO RETRO JUANPLOY ===== */
 #preloader {
   position: fixed;
@@ -989,7 +990,7 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
     #050605;
   opacity: 1;
   visibility: visible;
-  transition: opacity .7s ease, visibility .7s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 #preloader.intro-oculto {
@@ -1002,7 +1003,7 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: introAparecer 1s ease both;
+  animation: introAparecer 0.3s ease both;
 }
 
 .intro-logo img {
@@ -1012,8 +1013,9 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   object-fit: contain;
   filter: none;
   opacity: 1;
-  animation: conejoRetro 0.8s ease-in-out both;
+  animation: conejoRetro 0.4s ease-in-out both;
 }
+
 .intro-logo h1 {
   margin: 12px 0 10px;
   color: #fff;
@@ -1025,27 +1027,26 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
 }
 
 .intro-line {
-  width: 0;
+  width: 100px;
   height: 2px;
   background: #25d366;
   box-shadow: 0 0 10px rgba(37,211,102,.5);
-  animation: lineaIntro 1.2s .25s ease forwards;
+  animation: lineaIntro 0.3s ease forwards;
 }
 
 @keyframes introAparecer {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes conejoRetro {
-  0% { opacity: 0; transform: scale(.85); }
-  25% { opacity: .9; }
-  35% { opacity: .65; }
-  45% { opacity: 1; }
-  100% { opacity: .95; transform: scale(1); }
+  0% { opacity: 0; transform: scale(.9); }
+  50% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes lineaIntro {
+  from { width: 0; }
   to { width: 100px; }
 }
 
@@ -1056,4 +1057,3 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   }
   .intro-line { width: 100px; }
 }
-</style>
