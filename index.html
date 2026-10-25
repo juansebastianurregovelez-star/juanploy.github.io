@@ -701,3 +701,89 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
         }, 1500); // Duración de 1.5 segundos en pantalla
     });
 </script>
+<style>
+/* ===== ANIMACIÓN VERDE PARA LAS TARJETAS JUANPLOY ===== */
+
+#proceso > div > div {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  border: 1px solid #222 !important;
+  border-radius: 16px !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease !important;
+}
+
+/* Línea verde animada alrededor de la tarjeta */
+#proceso > div > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--angulo, 0deg),
+    transparent 0deg,
+    transparent 230deg,
+    #25d366 290deg,
+    #aaffc4 320deg,
+    transparent 360deg
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* PC: al pasar el cursor */
+@media (hover: hover) and (pointer: fine) {
+  #proceso > div > div:hover {
+    transform: translateY(-7px);
+    border-color: #25d366 !important;
+    box-shadow: 0 0 24px rgba(37, 211, 102, 0.18);
+  }
+
+  #proceso > div > div:hover::before {
+    opacity: 1;
+    animation: bordeVerde 2s linear infinite;
+  }
+}
+
+/* Celular: al tocar una tarjeta */
+@media (hover: none) and (pointer: coarse) {
+  #proceso > div > div:active {
+    transform: scale(0.98);
+    border-color: #25d366 !important;
+    box-shadow: 0 0 24px rgba(37, 211, 102, 0.25);
+  }
+
+  #proceso > div > div:active::before {
+    opacity: 1;
+    animation: bordeVerde 1.5s linear infinite;
+  }
+}
+
+@property --angulo {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes bordeVerde {
+  from {
+    --angulo: 0deg;
+  }
+  to {
+    --angulo: 360deg;
+  }
+}
+</style>
+```
