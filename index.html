@@ -550,19 +550,173 @@ body {
      <a href="https://wa.me/573216302437"target="_blank" style="display: inline-block !important; width: 100% !important; padding: 14px !important; text-align: center !important; text-decoration: none !important; font-weight: bold !important; border-radius: 10px !important; margin-top: 25px !important; background-color: #25d366 !important; color: #000 !important;">Me interesa ↗</a>
     </div>
   
-</section>
-  <!-- SECCIÓN DE CONTACTO -->
-  <section id="contacto" class="section contact scroll-animado">
-    <p style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00FF66; margin-bottom: 5px;">CONTACTANOS</p>
+<!-- SECCIÓN DE CONTACTO JUANPLOY -->
+<section id="contacto" class="section contact scroll-animado">
+
+  <div class="contacto-contenido">
+
+    <p class="contacto-etiqueta">CONTÁCTANOS</p>
+
     <h2>¡Hagamos que tu<br>marca destaque!</h2>
-    <p class="intro">Escríbenos directamente a nuestro numero o dale clic al botón para cotizar.</p>
-    <p style="font-size: 20px; font-weight: bold; margin: 15px 0; color: #fff;">📲 +57 321 630 2437</p>
-   <a href="https://wa.me/573216302437" target="_blank" style="background: #25d366; color: #fff; padding: 12px 25px; display: inline-block; border-radius: 8px; font-weight: bold; text-decoration: none;">Escríbeme ahora</a>
-  </section>
 
-</main>
+    <p class="contacto-descripcion">
+      Escríbenos para cotizar tu logo o video. Estamos listos para ayudarte
+      a darle vida a tu marca.
+    </p>
 
-<footer>
+    <p class="contacto-telefono">📲 +57 321 630 2437</p>
+
+    <div class="contacto-botones">
+
+      <!-- BOTÓN WHATSAPP -->
+      <a
+        class="contacto-btn whatsapp-btn"
+        href="https://wa.me/573216302437"
+        target="_blank"
+        rel="noopener noreferrer">
+        WhatsApp ↗
+      </a>
+
+      <!-- BOTÓN TIKTOK -->
+      <a
+        class="contacto-btn tiktok-btn"
+        href="https://www.tiktok.com/@juanploy"
+        target="_blank"
+        rel="noopener noreferrer">
+        TikTok ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ESTILOS DE LA SECCIÓN DE CONTACTO -->
+<style>
+#contacto {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 80px 20px !important;
+  text-align: center !important;
+  background: #000 !important;
+  color: #fff;
+  scroll-margin-top: 20px;
+}
+
+#contacto .contacto-contenido {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+#contacto .contacto-etiqueta {
+  color: #25d366;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0 0 22px;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: #fff !important;
+  font-size: clamp(34px, 6vw, 64px) !important;
+  line-height: 1.08 !important;
+  text-align: center !important;
+  margin: 0 auto 24px !important;
+  max-width: 800px;
+}
+
+#contacto .contacto-descripcion {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+#contacto .contacto-telefono {
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+#contacto .contacto-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#contacto .contacto-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 190px;
+  min-height: 54px;
+  padding: 15px 24px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#contacto .whatsapp-btn {
+  background: #25d366;
+  color: #000 !important;
+}
+
+#contacto .tiktok-btn {
+  background: #171717;
+  color: #fff !important;
+  border: 1px solid #444;
+}
+
+#contacto .contacto-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, .15);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 600px) {
+  #contacto {
+    padding: 60px 20px !important;
+  }
+
+  #contacto h2 {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+  }
+
+  #contacto .contacto-descripcion {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  #contacto .contacto-telefono {
+    font-size: 18px;
+  }
+
+  #contacto .contacto-botones {
+    gap: 12px;
+  }
+
+  #contacto .contacto-btn {
+    flex: 1 1 135px;
+    min-width: 0;
+    padding: 14px 12px;
+    font-size: 15px;
+  }
+}
+</style>
   <span>&copy; <span id="year"></span> JUANPLOY / DISEÑO - ANTIOQUIA</span>
 </footer>
 
