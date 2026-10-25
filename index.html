@@ -975,3 +975,86 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   }
 }
 </style>
+<style>
+/* ===== INTRO RETRO JUANPLOY ===== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, rgba(37, 211, 102, 0.09), transparent 45%),
+    #050605;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .7s ease, visibility .7s ease;
+}
+
+#preloader.intro-oculto {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: introAparecer 1s ease both;
+}
+
+.intro-logo img {
+  display: block;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(1);
+  opacity: .92;
+  animation: conejoRetro 1.8s ease-in-out both;
+}
+
+.intro-logo h1 {
+  margin: 12px 0 10px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-shadow: 0 0 12px rgba(255,255,255,.15);
+}
+
+.intro-line {
+  width: 0;
+  height: 2px;
+  background: #25d366;
+  box-shadow: 0 0 10px rgba(37,211,102,.5);
+  animation: lineaIntro 1.2s .25s ease forwards;
+}
+
+@keyframes introAparecer {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes conejoRetro {
+  0% { opacity: 0; transform: scale(.85); }
+  25% { opacity: .9; }
+  35% { opacity: .65; }
+  45% { opacity: 1; }
+  100% { opacity: .95; transform: scale(1); }
+}
+
+@keyframes lineaIntro {
+  to { width: 100px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #preloader, .intro-logo, .intro-logo img, .intro-line {
+    animation: none !important;
+    transition: none !important;
+  }
+  .intro-line { width: 100px; }
+}
+</style>
