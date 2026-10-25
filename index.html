@@ -53,13 +53,41 @@
     #contacto h2 {
   color: #fff !important;
 }
-    #inicio {
+   #inicio {
   background:
     radial-gradient(circle at 82% 22%, rgba(90, 130, 95, 0.18) 0%, transparent 35%),
     radial-gradient(circle at 12% 88%, rgba(24, 67, 43, 0.32) 0%, transparent 42%),
     linear-gradient(135deg, #080909, #121613) !important;
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
-</style>
+
+/* Difuminado inferior hacia el negro */
+#inicio::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    #000 100%
+  );
+  pointer-events: none;
+}
+
+/* Mantener el contenido de la portada por encima del difuminado */
+#inicio > * {
+  position: relative;
+  z-index: 2;
+}
+  <style>
   <style>
 .tarjeta-precio {
   padding: 20px !important;
