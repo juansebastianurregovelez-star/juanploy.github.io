@@ -1212,3 +1212,13 @@ button {
   height: 55px;
   object-fit: contain;
 }
+
+/* LOGO DE NEQUI DENTRO DE SU TARJETA */
+.banco-logo-img {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
