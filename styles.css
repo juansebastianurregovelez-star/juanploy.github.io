@@ -1167,3 +1167,30 @@ button {
     display: flex !important;
   }
 }
+
+/* AJUSTE DEL ENCABEZADO DE PAGOS */
+#panel-pagos .encabezado-pagos {
+  width: 100%;
+  max-width: 750px;
+  margin: 35px auto 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#panel-pagos .encabezado-pagos h2 {
+  font-size: clamp(25px, 3vw, 38px) !important;
+  line-height: 1.2;
+  margin: 15px 0;
+  text-align: center;
+}
+
+#panel-pagos .encabezado-pagos p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
