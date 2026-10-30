@@ -1410,4 +1410,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const planes = document.getElementById("panel-planes");
+  const pagos = document.getElementById("panel-pagos");
+  const btnPlanes = document.getElementById("btn-planes");
+  const btnPagos = document.getElementById("btn-pagos");
 
+  if (!planes || !pagos || !btnPlanes || !btnPagos) return;
+
+  btnPlanes.onclick = () => {
+    planes.style.display = "block";
+    pagos.style.display = "none";
+    btnPlanes.classList.add("activo");
+    btnPagos.classList.remove("activo");
+  };
+
+  btnPagos.onclick = () => {
+    planes.style.display = "none";
+    pagos.style.display = "block";
+    btnPagos.classList.add("activo");
+    btnPlanes.classList.remove("activo");
+  };
+
+  btnPlanes.click();
+});
+</script>
