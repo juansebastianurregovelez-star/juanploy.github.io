@@ -1165,3 +1165,160 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
   }
   .intro-line { width: 100px; }
 }
+
+.selector-pagos {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  max-width: 430px;
+  margin: 25px auto 35px;
+  padding: 5px;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  background: #101010;
+}
+
+.boton-selector {
+  flex: 1;
+  padding: 13px 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #aaa;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.boton-selector.activo {
+  background: #25d366;
+  color: #000;
+  box-shadow: 0 0 15px #25d36635;
+}
+
+.boton-selector:hover {
+  border-color: #25d366;
+}
+
+.encabezado-x {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.logo-x {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #fff;
+  color: #000;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.encabezado-x h2 {
+  margin: 0 0 7px;
+  color: #fff;
+}
+
+.encabezado-x p {
+  margin: 5px 0;
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.lista-bancos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.banco-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  min-width: 0;
+  background: #111114;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+  transition: .3s ease;
+}
+
+.banco-item:hover {
+  border-color: #25d366;
+  transform: translateY(-3px);
+}
+
+.banco-logo {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #252525;
+  color: #25d366;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.destino-x {
+  margin-top: 25px;
+  color: #25d366;
+  font-weight: bold;
+}
+
+@media(max-width:600px) {
+  .selector-pagos {
+    width: 100%;
+  }
+
+  .boton-selector {
+    font-size: 12px;
+    padding: 12px 5px;
+  }
+
+  .lista-bancos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .banco-item {
+    padding: 9px 7px;
+    gap: 7px;
+    font-size: 12px;
+  }
+
+  .banco-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .encabezado-x {
+    gap: 12px;
+  }
+
+  .logo-x {
+    width: 52px;
+    height: 52px;
+    font-size: 30px;
+  }
+
+  .encabezado-x h2 {
+    font-size: 21px;
+  }
+}
