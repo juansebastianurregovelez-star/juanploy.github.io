@@ -1320,3 +1320,27 @@ document.querySelectorAll('.tarjeta-precio').forEach((tarjeta) => {
     font-size: 21px;
   }
 }
+
+<script>
+function mostrarPanel(panel, boton) {
+  const planes = document.getElementById("panel-planes");
+  const pagos = document.getElementById("panel-pagos");
+
+  const botones = document.querySelectorAll(".boton-selector");
+
+  if (panel === "planes") {
+    planes.style.display = "block";
+    pagos.style.display = "none";
+  } else {
+    planes.style.display = "none";
+    pagos.style.display = "block";
+  }
+
+  botones.forEach(function(b) {
+    b.classList.remove("activo");
+  });
+
+  boton.classList.add("activo");
+}
+</script>
+</body>
