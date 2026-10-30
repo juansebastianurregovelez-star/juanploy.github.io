@@ -555,12 +555,119 @@ body {
 <!-- ========================================== -->
   <!-- 04 / SECCIÓN DE PRECIOS ACTUALIZADA       -->
   <!-- ========================================== -->
-<div id="panel-planes">
+  
+<section id="seccion-precios" style="padding:60px 20px;background:#000;color:white;text-align:center;">
+
+  <p style="color:#00ff66;letter-spacing:2px;">TARIFAS</p>
+  <h2 style="font-size:32px;margin-bottom:10px;">PLANES A TU MEDIDA</h2>
+  <p style="color:#ccc;margin-bottom:25px;">
+    Elige el impulso que tu marca necesita.
+  </p>
+
+  <!-- BOTONES -->
+  <div class="selector-pagos">
+    <button class="boton-selector activo" onclick="mostrarPanel('planes',this)">
+      Planes de precios
+    </button>
+    <button class="boton-selector" onclick="mostrarPanel('pagos',this)">
+      Métodos de pago
+    </button>
+  </div>
+
+  <!-- PANEL DE PRECIOS -->
+  <div id="panel-planes">
+
+  </div>
+
+  <!-- PANEL DE PAGOS -->
+  <div id="panel-pagos" style="display:none;">
+ <!-- Tarjeta 1: Logo -->
+    <div class="tarjeta-precio">
+      <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 10px; color: #fff; font-family: sans-serif;">Diseño de Logo</h3>
+      <div style="font-size: 32px; font-weight: bold; color: #fff; margin-bottom: 15px; font-family: sans-serif;">$15.000 <span style="font-size: 14px; color: #aaa; font-weight: normal;">COP</span></div>
+      <p style="color: #aaa; font-size: 14px; line-height: 1.6; min-height: 60px; margin: 0; font-family: sans-serif;">Creación de identidad visual única para tu negocio local o camión.</p>
+   <a href="https://wa.me/573216302437"target="_blank" style="display: inline-block !important; width: 100% !important; padding: 14px !important; text-align: center !important; text-decoration: none !important; font-weight: bold !important; border-radius: 10px !important; margin-top: 25px !important; background-color: #fff !important; color: #000 !important;">Me interesa ↗</a>
+    </div>
+
+    <!-- Tarjeta 2: Video -->
+    <div class="tarjeta-precio">
+      <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 10px; color: #fff; font-family: sans-serif;">Edición de Video</h3>
+      <div style="font-size: 32px; font-weight: bold; color: #fff; margin-bottom: 15px; font-family: sans-serif;">$20.000 <span style="font-size: 14px; color: #aaa; font-weight: normal;">COP</span></div>
+      <p style="color: #aaa; font-size: 14px; line-height: 1.6; min-height: 60px; margin: 0; font-family: sans-serif;">Edición dinámica e impacto para tus videos de TikTok o Reels.</p>
+      <a href="https://wa.me/573216302437" target="_blank" style="display: inline-block !important; width: 100% !important; padding: 14px !important; text-align: center !important; text-decoration: none !important; font-weight: bold !important; border-radius: 10px !important; margin-top: 25px !important; background-color: #fff !important; color: #000 !important;">Me interesa ↗</a>
+    </div>
+
+    <!-- Tarjeta 3: Combo Destacado -->
+    <div class="tarjeta-precio destacada">
+      <span style="position: absolute; top: -12px; right: 20px; background-color: #25d366; color: #000; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; font-family: sans-serif;">Mejor Valor</span>
+      <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 10px; color: #fff; font-family: sans-serif;">Logo + Video</h3>
+      <div style="font-size: 32px; font-weight: bold; color: #25d366; margin-bottom: 15px; font-family: sans-serif;">$30.000 <span style="font-size: 14px; color: #aaa; font-weight: normal;">COP</span></div>
+      <p style="color: #aaa; font-size: 14px; line-height: 1.6; min-height: 60px; margin: 0; font-family: sans-serif;">Combo completo: Identidad de marca + video promocional editado.</p>
+     <a href="https://wa.me/573216302437"target="_blank" style="display: inline-block !important; width: 100% !important; padding: 14px !important; text-align: center !important; text-decoration: none !important; font-weight: bold !important; border-radius: 10px !important; margin-top: 25px !important; background-color: #25d366 !important; color: #000 !important;">Me interesa ↗</a>
+    </div>
+  
+    <div class="encabezado-x">
+      <div class="logo-x">X</div>
+      <div>
+        <h2>Paga con X</h2>
+        <p>Recibimos tus pagos.</p>
+        <p>Envía dinero desde cualquiera de estas entidades mediante Bre-B.</p>
+      </div>
+    </div>
+
+    <div class="lista-bancos">
+
+      <!-- Cada banco -->
+      <div class="banco-item">
+        <div class="banco-logo">N</div>
+        <span>Nequi</span>
+      </div>
+
+      <div class="banco-item">
+        <div class="banco-logo">B</div>
+        <span>Bancolombia</span>
+      </div>
+
+      <div class="banco-item">
+        <div class="banco-logo">D</div>
+        <span>Davivienda</span>
+      </div>
+
+      <div class="banco-item">
+        <div class="banco-logo">D</div>
+        <span>Daviplata</span>
+      </div>
+
+      <div class="banco-item">
+        <div class="banco-logo">N</div>
+        <span>Nu</span>
+      </div>
+
+      <div class="banco-item">
+        <div class="banco-logo">B</div>
+        <span>Banco de Bogotá</span>
+      </div>
+
+    </div>
+
+    <p class="destino-x">Destino único: X</p>
+
+  </div>
+</section>
+
 <p style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00FF66; margin-bottom: 5px;">tarifas</p>
     <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 10px; display: inline-block; width: 100%; color: #fff; font-family: sans-serif;">PLANES A TU MEDIDA</h2>
     <p style="color: #ccc; font-size: 16px; max-width: 600px; margin: 0 auto 20px auto; font-family: sans-serif;">Elige el impulso que tu marca necesita para destacar en redes sociales.</p>
   </div>
+  <div class="selector-planes">
+  <button id="btn-precios" class="boton-selector activo"
+    onclick="mostrarPanel('precios')">PRECIOS</button>
+
+  <button id="btn-pagos" class="boton-selector"
+    onclick="mostrarPanel('pagos')">MÉTODOS DE PAGO</button>
+</div>
 <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; max-width: 1100px; margin: 30px auto 0 auto;">
+
  
     <!-- Tarjeta 1: Logo -->
     <div class="tarjeta-precio">
@@ -586,7 +693,7 @@ body {
       <p style="color: #aaa; font-size: 14px; line-height: 1.6; min-height: 60px; margin: 0; font-family: sans-serif;">Combo completo: Identidad de marca + video promocional editado.</p>
      <a href="https://wa.me/573216302437"target="_blank" style="display: inline-block !important; width: 100% !important; padding: 14px !important; text-align: center !important; text-decoration: none !important; font-weight: bold !important; border-radius: 10px !important; margin-top: 25px !important; background-color: #25d366 !important; color: #000 !important;">Me interesa ↗</a>
     </div>
-</style>
+  
 <!-- SECCIÓN DE CONTACTO JUANPLOY -->
 <section id="contacto" class="section contact scroll-animado">
 
