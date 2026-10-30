@@ -561,21 +561,18 @@ body {
   <p style="color:#ccc;margin-bottom:25px;">
     Elige el impulso que tu marca necesita.
   </p>
-  <!-- SELECTOR -->
-  <div class="selector-pagos">
-    <button type="button" id="btn-planes" class="boton-selector activo"
-      onclick="mostrarPanel('planes', this)">
-      Planes de precios
-    </button>
+ <div class="selector-pagos">
+  <button type="button" id="btn-planes" class="boton-selector activo">
+    Planes de precios
+  </button>
 
-    <button type="button" id="btn-pagos" class="boton-selector"
-      onclick="mostrarPanel('pagos', this)">
-      Métodos de pago
-    </button>
-  </div>
+  <button type="button" id="btn-pagos" class="boton-selector">
+    Métodos de pago
+  </button>
+</div>
 
-  <!-- PANEL DE PLANES -->
-  <div id="panel-planes">
+<!-- PANEL DE PLANES -->
+<div id="panel-planes">
 
     <div style="display:flex;flex-wrap:wrap;gap:25px;justify-content:center;max-width:1100px;margin:30px auto 0;">
 
@@ -1342,5 +1339,40 @@ function mostrarPanel(panel, boton) {
 
   boton.classList.add("activo");
 }
+</script>
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const panelPlanes = document.getElementById("panel-planes");
+  const panelPagos = document.getElementById("panel-pagos");
+  const botonPlanes = document.getElementById("btn-planes");
+  const botonPagos = document.getElementById("btn-pagos");
+
+  if (!panelPlanes || !panelPagos || !botonPlanes || !botonPagos) {
+    console.error("No se encontraron los paneles o botones de tarifas.");
+    return;
+  }
+
+  function mostrarPanel(tipo) {
+    const mostrarPlanes = tipo === "planes";
+
+    panelPlanes.style.display = mostrarPlanes ? "block" : "none";
+    panelPagos.style.display = mostrarPlanes ? "none" : "block";
+
+    botonPlanes.classList.toggle("activo", mostrarPlanes);
+    botonPagos.classList.toggle("activo", !mostrarPlanes);
+  }
+
+  botonPlanes.addEventListener("click", function () {
+    mostrarPanel("planes");
+  });
+
+  botonPagos.addEventListener("click", function () {
+    mostrarPanel("pagos");
+  });
+
+  mostrarPanel("planes");
+});
 </script>
 </body>
