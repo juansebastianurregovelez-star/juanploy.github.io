@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juansebastianurregovelez-star.github.io/juanploy.github.io/sitemap.xml
